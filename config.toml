@@ -1,4 +1,4 @@
-baseurl = "lsheltonsto.github.io"
+baseurl = "https://lsheltonsto.github.io"
 metaDataFormat = "yaml"
 title = "Lindsay T. Shelton"
 theme = "blist"
