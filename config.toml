@@ -1,7 +1,8 @@
-baseurl = "https://lsheltonsto.github.io"
+baseurl = "/"
 metaDataFormat = "yaml"
 title = "Lindsay T. Shelton"
 theme = "blist"
+canonifyurls = true
 
 DefaultContentLanguage = "en"
 DefaultContentLanguageInSubdir = true
