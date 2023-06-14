@@ -1,7 +1,7 @@
 ---
 title: "A Free Way to Improve Employee Productivity"
 date: 2020-08-19T14:49:05-05:00
-draft: true
+draft: false
 author: "Lindsay Shelton"
 tags: ["personal", "career"]
 thumbnail: /images/a-free-way-to-improve-employee-productivity.jpg

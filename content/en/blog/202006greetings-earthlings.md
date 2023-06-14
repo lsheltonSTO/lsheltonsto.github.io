@@ -1,7 +1,7 @@
 ---
 title: "Greetings Earthlings"
 date: 2020-06-20T14:49:05-05:00
-draft: true
+draft: false
 author: "Lindsay Shelton"
 tags: ["personal"]
 thumbnail: /images/greetings-earthlings.jpg

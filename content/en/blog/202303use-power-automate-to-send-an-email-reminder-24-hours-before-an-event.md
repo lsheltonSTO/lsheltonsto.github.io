@@ -1,7 +1,7 @@
 ---
 title: "Use Power Automate to Send an Email Reminder 24 Hours Before an Event"
 date: 2023-03-27T14:49:05-05:00
-draft: true
+draft: false
 author: "Lindsay Shelton"
 tags: ["onenote","power automate"]
 thumbnail: /images/use-power-automate-to-send-an-email-reminder-24-hours-before-an-event1.png
