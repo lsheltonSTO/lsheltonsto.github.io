@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lindsay T. Shelton</title>
+    <link>https://lindsaytshelton.com/</link>
+    <description>Recent content on Lindsay T. Shelton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 09 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lindsaytshelton.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://lindsaytshelton.com/page/about/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://lindsaytshelton.com/page/about/</guid>
+      <description>I&amp;rsquo;m a 30-something in her second career just living the dream. Currently I work for a medical research institute non-profit, working to support scientists in advancing our mission.
+I spent the last decade teaching English Language Arts. During that time, I was selected to receive training to become a technology and pre-engineering teacher based on my aptitude for learning and adapting new technologies with my own students and colleagues.</description>
+    </item>
+    
+  </channel>
+</rss>
