@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="https:/images/LTS.png">
+
+  <title>
+  Approvals Using SharePoint Groups - Lindsay T. Shelton
+  </title>
+  <meta name="description" content="At my office, we have a lot of documents that undergo an annual review process. I was tasked pretty early on in my time here to help move this process from an Access database into the cloud. I could go on and on about the intricacies of what we set up, but I wanted to zero in on just one feature of the Power Automate flows that are set up: the group approval." />
+  <meta name="author" content="Lindsay Shelton" />
+  <meta name="generator" content="Hugo 0.111.3"><link
+    rel="stylesheet"
+    href="https:/css/styles.min.c0846aac9db6c87efe354bad93a5e4432ef35cc12598aeed07df50323381cc06.css"
+    integrity="sha256-wIRqrJ22yH7+NUutk6XkQy7zXMElmK7tB99QMjOBzAY="
+  />
+  
+  
+
+  <meta property="og:title" content="Approvals Using SharePoint Groups" />
+<meta property="og:description" content="At my office, we have a lot of documents that undergo an annual review process. I was tasked pretty early on in my time here to help move this process from an Access database into the cloud. I could go on and on about the intricacies of what we set up, but I wanted to zero in on just one feature of the Power Automate flows that are set up: the group approval." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https:/blog/202302approvals-using-sharepoint-groups/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-02-15T14:49:05-05:00" />
+<meta property="article:modified_time" content="2023-02-15T14:49:05-05:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Approvals Using SharePoint Groups"/>
+<meta name="twitter:description" content="At my office, we have a lot of documents that undergo an annual review process. I was tasked pretty early on in my time here to help move this process from an Access database into the cloud. I could go on and on about the intricacies of what we set up, but I wanted to zero in on just one feature of the Power Automate flows that are set up: the group approval."/>
+
+  <meta itemprop="name" content="Approvals Using SharePoint Groups">
+<meta itemprop="description" content="At my office, we have a lot of documents that undergo an annual review process. I was tasked pretty early on in my time here to help move this process from an Access database into the cloud. I could go on and on about the intricacies of what we set up, but I wanted to zero in on just one feature of the Power Automate flows that are set up: the group approval."><meta itemprop="datePublished" content="2023-02-15T14:49:05-05:00" />
+<meta itemprop="dateModified" content="2023-02-15T14:49:05-05:00" />
+<meta itemprop="wordCount" content="1707">
+<meta itemprop="keywords" content="how to,approvals,sharepoint,power automate," />
+
+  
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="https:/" class="capitalize font-extrabold text-2xl">
+    
+    <img src="https:/images/LTS2.png" alt="Lindsay T. Shelton" class="h-8 max-w-full" />
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
+
+    
+    <li><a href="https:/blog">Blog</a></li>
+    
+    <li><a href="https:/page/about/">About</a></li>
+    
+    <li><a href="https:/tags">Tags</a></li>
+    
+
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main class="flex-1">
+  
+  
+
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">Approvals Using SharePoint Groups</h1>
+    
+    <h5 class="text-sm flex items-center flex-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      Posted on 
+  
+    February 15, 2023
+  
+
+
+      
+        &nbsp;&bull;&nbsp;
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      9&nbsp;minutes
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      1707&nbsp;words
+      
+    </h5>
+    
+
+    <details id="TableOfContents" class="px-4 mt-4 bg-gray-100 dark:bg-gray-700 rounded toc">
+    <summary class="flex items-center font-bold py-2 px-4 cursor-pointer justify-between select-none text-black dark:text-white">
+      <span>Table of contents</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <polyline points="6 9 12 15 18 9"></polyline>
+     </svg>
+    </summary>
+
+    <ul class="mt-2 pb-4">
+        
+
+        
+        <li>
+        <a href="#getting-set-up--sharepoint-side">Getting Set Up – SharePoint Side</a>
+        
+
+        
+        </li><li>
+        <a href="#starting-your-flow">Starting Your Flow</a>
+        
+
+        
+        </li><li>
+        <a href="#build-a-million-variables">Build A Million Variables</a>
+        
+
+        
+        </li><li>
+        <a href="#switching-it-up">Switching It Up</a>
+        
+
+        
+        </li><li>
+        <a href="#over-and-over-and-over">Over and Over and Over</a>
+        
+
+        
+        </li><li>
+        <a href="#wrapping-it-up">Wrapping It Up</a>
+        </li></ul>
+  </details>
+
+    <p>At my office, we have a lot of documents that undergo an annual review process. I was tasked pretty early on in my time here to help move this process from an Access database into the cloud. I could go on and on about the intricacies of what we set up, but I wanted to zero in on just one feature of the Power Automate flows that are set up: the group approval. Once an SOP, the documents being reviewed, has been through edits and marked up with changes, it needed to get “sent” to a variety of teams for voting – does the SOP get approved or not?</p>
+<p>So, we needed to translate this use case into M365 tooling. I opted to use SharePoint groups and Power Automate flows with a “For a selected file” trigger. Note: one drawback of this trigger? You can’t move this into another environment. <a href="https://learn.microsoft.com/en-us/sharepoint/dev/business-apps/power-automate/sharepoint-connector-actions-triggers#for-a-selected-item">Flows with this type of trigger only function in the default environment</a>. /funfact</p>
+<p><img src="https:/images/approvals-using-sharepoint-groups1.jpg" alt="Placeholder"></p>
+<h2 id="getting-set-up--sharepoint-side">Getting Set Up – SharePoint Side</h2>
+<p>Other than this big drawback, this trigger works great once you do a little user training, and our users have been able to pretty easily navigate this for over a year now. Next, we picked SharePoint groups as the mechanism for differentiating the clusters of users who would need to vote on different things. This was partly because in my organization, we have more control over this type of group, so we were able to build and name our groups as we pleased.</p>
+<p>I won’t go into how to create a SharePoint group here (<a href="https://learn.microsoft.com/en-us/sharepoint/customize-sharepoint-site-permissions">Microsoft has the steps for it</a>), but I will tell you – note down both the name AND the ID of the group. To get the ID, go to the group and look in the URL. You want to note down the number that comes after “MembershipGroupId=”.</p>
+<p><img src="https:/images/approvals-using-sharepoint-groups2.png" alt="Placeholder"></p>
+<h2 id="starting-your-flow">Starting Your Flow</h2>
+<p>Then, I built a big ol’ flow. Your flow doesn’t have to be as big as mine, but our users had 7 different groups that they wanted to account for.</p>
+<p>To start out, you want to use the trigger we just discussed – For a selected file (SharePoint). Here, you want to build out an input option, so click “+ Add an input” at the bottom of the trigger box. We want to give the person running the approval flow the option of which groups they want to do the voting. In my use case, I wanted them to have a multi-select list of options, meaning they can choose more than one group to vote. NOTE what you are calling this question – I called mine “ApproverMulti”. My flow trigger looks like this:</p>
+<p><img src="https:/images/approvals-using-sharepoint-groups3.png" alt="Placeholder"></p>
+<p>Here’s what this translates to in SharePoint:</p>
+<p><img src="https:/images/approvals-using-sharepoint-groups4.png" alt="Placeholder"></p>
+<p>Then, your first action should be to Get file properties (SharePoint) so that you can get all of the details about the file that has been selected for voting for later use in the flow.</p>
+<h2 id="build-a-million-variables">Build A Million Variables</h2>
+<p>Next, we need to initialize variables for each of the groups that you have voting. This will take up a bunch of blocks, but we can’t initialize (or create) a variable anywhere but at the top level of a flow, even though it would be nice to hide them in a Scope block.</p>
+<p>Each variable can be simple – just put in the name of the group in the “Name” field and set the “Type” as “String”. NOTE: the name of the group should match what you have put in the top trigger. It does NOT need to match the actual group name in SharePoint. For example, my actual group name is something like S-LAS-Husbandry, but I just call it Husbandry. As long as I call it exactly that throughout my flow, the references will all work. Why is that? Because we are going to use that ID when we make a call to SharePoint for a list of members, not the name.</p>
+<p>This is what your flow should look like so far (see above for what the trigger should look like), with Initialize variable actions for each of your groups.</p>
+<p><img src="https:/images/approvals-using-sharepoint-groups5.png" alt="Placeholder"></p>
+<p>We have one extra variable we need to create:</p>
+<p>String variable called approversEmails, no value right now. This is going to store the email addresses of every approver from every group.</p>
+<h2 id="switching-it-up">Switching It Up</h2>
+<p>Next, we are going to put in an Apply to each block. Where it says to “Select an output from previous steps”, you are going to put in SharePoint dynamic content. Specifically, whatever you called the question in the trigger where you find out what groups the person wants to have voting. I called my “ApproverMulti” if you scroll up and check. We want to apply whatever is in the ApproverMulti field to what we are going to do next, which is to insert a Switch control inside of the Apply to each box. It should look like this:</p>
+<p><img src="https:/images/approvals-using-sharepoint-groups6.png" alt="Placeholder"></p>
+<p>We will want to set that switch to be on “Current item” (try looking at the bottom of your dynamic content list, that’s where it usually shows up for me), and then we need to create what is called a Case for each of the groups that someone can select.</p>
+<p>When you create a Switch block, it defaults to giving you one Case. You can click the three horizontal dots and rename it – that’s what I do to make it clearer which group I’m working on. You can also add the Cases you need by clicking the plus sign in between the first Case and the Default, which is where you put actions for if something is selected other than what you’ve designated a Case for.</p>
+<p><img src="https:/images/approvals-using-sharepoint-groups7.png" alt="Placeholder"></p>
+<p>Click on each Case to expand it. Then, you need to put what that Case equals. This is telling Power Automate, “Hey, when what is in the Switch block equals “blank”, then do the series of actions I’m going to put in this Case block”. So that’s why I’m making a Case block for each of my group names, and then I don’t need to worry about the Default action – the person starting the flow can’t select anything but the options I’ve given then.</p>
+<h2 id="over-and-over-and-over">Over and Over and Over</h2>
+<p>It’s about to get repetitive. The actions I’m going to tell you to put inside one of your Cases, you will adjust and put in every single one of your Cases, but with the appropriate group ID.</p>
+<p>Start with a Send an HTTP request to SharePoint action. This is where we are going to use the group ID to get the list of users who are in that group. Here is the Uri you are going to input, but with your own group ID (where the 710 is):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>_api/web/SiteGroups/GetById(710)/Users
+</span></span></code></pre></div><p>For Headers, put in:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>(key) content-type
+</span></span><span style="display:flex;"><span>(value) application/json;odata=verbose 
+</span></span></code></pre></div><p>So, yours should look something like this:</p>
+<p><img src="https:/images/approvals-using-sharepoint-groups8.png" alt="Placeholder"></p>
+<p>The next step might look a little scary, but it’s meant to help give us more data to work with. Add a Parse JSON action. I’ll give you the Schema that I use and you can try to copy/paste it, but if that doesn’t work, here’s what to do: run the flow up to the HTTP request. Copy the output from the HTTP request in the flow run. Try the Parse JSON action again, but this time, click the button that says “Generate from sample”. You can then paste what you got and generate your own JSON. If my JSON schema works for you, try this first:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    &#34;type&#34;: &#34;object&#34;,
+</span></span><span style="display:flex;"><span>    &#34;properties&#34;: {
+</span></span><span style="display:flex;"><span>        &#34;d&#34;: {
+</span></span><span style="display:flex;"><span>            &#34;type&#34;: &#34;object&#34;,
+</span></span><span style="display:flex;"><span>            &#34;properties&#34;: {
+</span></span><span style="display:flex;"><span>                &#34;results&#34;: {
+</span></span><span style="display:flex;"><span>                    &#34;type&#34;: &#34;array&#34;,
+</span></span><span style="display:flex;"><span>                    &#34;items&#34;: {
+</span></span><span style="display:flex;"><span>                        &#34;type&#34;: &#34;object&#34;,
+</span></span><span style="display:flex;"><span>                        &#34;properties&#34;: {
+</span></span><span style="display:flex;"><span>                            &#34;__metadata&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;object&#34;,
+</span></span><span style="display:flex;"><span>                                &#34;properties&#34;: {
+</span></span><span style="display:flex;"><span>                                    &#34;id&#34;: {
+</span></span><span style="display:flex;"><span>                                        &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                                    },
+</span></span><span style="display:flex;"><span>                                    &#34;uri&#34;: {
+</span></span><span style="display:flex;"><span>                                        &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                                    },
+</span></span><span style="display:flex;"><span>                                    &#34;type&#34;: {
+</span></span><span style="display:flex;"><span>                                        &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                                    }
+</span></span><span style="display:flex;"><span>                                }
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;Alerts&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;object&#34;,
+</span></span><span style="display:flex;"><span>                                &#34;properties&#34;: {
+</span></span><span style="display:flex;"><span>                                    &#34;__deferred&#34;: {
+</span></span><span style="display:flex;"><span>                                        &#34;type&#34;: &#34;object&#34;,
+</span></span><span style="display:flex;"><span>                                        &#34;properties&#34;: {
+</span></span><span style="display:flex;"><span>                                            &#34;uri&#34;: {
+</span></span><span style="display:flex;"><span>                                                &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                                            }
+</span></span><span style="display:flex;"><span>                                        }
+</span></span><span style="display:flex;"><span>                                    }
+</span></span><span style="display:flex;"><span>                                }
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;Groups&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;object&#34;,
+</span></span><span style="display:flex;"><span>                                &#34;properties&#34;: {
+</span></span><span style="display:flex;"><span>                                    &#34;__deferred&#34;: {
+</span></span><span style="display:flex;"><span>                                        &#34;type&#34;: &#34;object&#34;,
+</span></span><span style="display:flex;"><span>                                        &#34;properties&#34;: {
+</span></span><span style="display:flex;"><span>                                            &#34;uri&#34;: {
+</span></span><span style="display:flex;"><span>                                                &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                                            }
+</span></span><span style="display:flex;"><span>                                        }
+</span></span><span style="display:flex;"><span>                                    }
+</span></span><span style="display:flex;"><span>                                }
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;Id&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;integer&#34;
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;IsHiddenInUI&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;boolean&#34;
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;LoginName&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;Title&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;PrincipalType&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;integer&#34;
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;Email&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;Expiration&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;IsEmailAuthenticationGuestUser&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;boolean&#34;
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;IsShareByEmailGuestUser&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;boolean&#34;
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;IsSiteAdmin&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;boolean&#34;
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;UserId&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;object&#34;,
+</span></span><span style="display:flex;"><span>                                &#34;properties&#34;: {
+</span></span><span style="display:flex;"><span>                                    &#34;__metadata&#34;: {
+</span></span><span style="display:flex;"><span>                                        &#34;type&#34;: &#34;object&#34;,
+</span></span><span style="display:flex;"><span>                                        &#34;properties&#34;: {
+</span></span><span style="display:flex;"><span>                                            &#34;type&#34;: {
+</span></span><span style="display:flex;"><span>                                                &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                                            }
+</span></span><span style="display:flex;"><span>                                        }
+</span></span><span style="display:flex;"><span>                                    },
+</span></span><span style="display:flex;"><span>                                    &#34;NameId&#34;: {
+</span></span><span style="display:flex;"><span>                                        &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                                    },
+</span></span><span style="display:flex;"><span>                                    &#34;NameIdIssuer&#34;: {
+</span></span><span style="display:flex;"><span>                                        &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                                    }
+</span></span><span style="display:flex;"><span>                                }
+</span></span><span style="display:flex;"><span>                            },
+</span></span><span style="display:flex;"><span>                            &#34;UserPrincipalName&#34;: {
+</span></span><span style="display:flex;"><span>                                &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>                            }
+</span></span><span style="display:flex;"><span>                        },
+</span></span><span style="display:flex;"><span>                        &#34;required&#34;: [
+</span></span><span style="display:flex;"><span>                            &#34;__metadata&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;Alerts&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;Groups&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;Id&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;IsHiddenInUI&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;LoginName&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;Title&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;PrincipalType&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;Email&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;Expiration&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;IsEmailAuthenticationGuestUser&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;IsShareByEmailGuestUser&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;IsSiteAdmin&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;UserId&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;UserPrincipalName&#34;
+</span></span><span style="display:flex;"><span>                        ]
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>(Yes, I know, there are more direct ways of doing this than Parse JSON, but I like Parse JSON. Feel free to do this how you please!)</p>
+<p>Next, add an Append to string variable block. This is where our Parse JSON new dynamic content will come in handy. We want to get the UserPrincipalName from the JSON output and append it to the variable for this Case’s group. So in my example, I’m appending the Parse JSON’s UserPrincipalName dynamic content to the Husbandry group variable. Note that because there’s more than one UserPrincipalName coming out of this, it’s going to automatically pop my Append to string variable action into an Apply to each action, like so:</p>
+<p><img src="https:/images/approvals-using-sharepoint-groups9.png" alt="Placeholder"></p>
+<p>Lastly, we want to use one more Append to string variable action. We want to append the value of what’s now in the group variable (Husbandry, in my case) to the more generic approverGroups variable we made. This way, we can send one variable to the Start and Wait for an Approval action as the approver, even though it’s actually going to contain a potentially long list of approver emails.</p>
+<h2 id="wrapping-it-up">Wrapping It Up</h2>
+<p>From there, it’s pretty simple! At least it can be for you – mine goes on and on and on, but that’s a me problem.</p>
+<p><img src="https:/images/approvals-using-sharepoint-groups10.png" alt="Placeholder"></p>
+<p>Just make sure that whichever Approval action you choose, assign it to your “approversEmails” variable.</p>
+<p>I go further and write my approver groups back to the SharePoint doc library – comment on this post or on Twitter/LinkedIn if you’d like a part 2 to this to find out how I do that!</p>
+
+  </article>
+<div class="px-2 mb-2">
+  
+  <script src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</div>
+<div class="bg-pink-100 dark:bg-gray-900">
+  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Follow me</div>
+      <p class="opacity-60">Follow along for Power Platform, M365, and cat goodness</p>
+    </div>
+
+    <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
+      
+
+      
+      <li>
+        <a
+          href="https://twitter.com/LShelton_Tech"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a
+          href="https://linkedin.com/in/lindsaytshelton"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    </ul>
+  </div>
+</div>
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    Copyright © 2023 - Lindsay Shelton · All rights reserved
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https:/js/scripts.min.js"></script>
+
+
+
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
+</html>

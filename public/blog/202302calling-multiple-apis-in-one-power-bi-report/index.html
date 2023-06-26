@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="https:/images/LTS.png">
+
+  <title>
+  Calling Multiple APIs in One Power BI Report (And All the Work-Arounds That Required) - Lindsay T. Shelton
+  </title>
+  <meta name="description" content="So, this one was a lot more difficult than it should have been. It started with a plea for help on Twitter and a really helpful first blog post (created for me, so honored!) from Andy O’Donnell here. (He’s super nice, follow him on Twitter too!) Andy got me going, which I am SO grateful for… but then I ran into an error. And then another error. And another. You get the idea." />
+  <meta name="author" content="Lindsay Shelton" />
+  <meta name="generator" content="Hugo 0.111.3"><link
+    rel="stylesheet"
+    href="https:/css/styles.min.c0846aac9db6c87efe354bad93a5e4432ef35cc12598aeed07df50323381cc06.css"
+    integrity="sha256-wIRqrJ22yH7+NUutk6XkQy7zXMElmK7tB99QMjOBzAY="
+  />
+  
+  
+
+  <meta property="og:title" content="Calling Multiple APIs in One Power BI Report (And All the Work-Arounds That Required)" />
+<meta property="og:description" content="So, this one was a lot more difficult than it should have been. It started with a plea for help on Twitter and a really helpful first blog post (created for me, so honored!) from Andy O’Donnell here. (He’s super nice, follow him on Twitter too!) Andy got me going, which I am SO grateful for… but then I ran into an error. And then another error. And another. You get the idea." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https:/blog/202302calling-multiple-apis-in-one-power-bi-report/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-02-02T14:49:05-05:00" />
+<meta property="article:modified_time" content="2023-02-02T14:49:05-05:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Calling Multiple APIs in One Power BI Report (And All the Work-Arounds That Required)"/>
+<meta name="twitter:description" content="So, this one was a lot more difficult than it should have been. It started with a plea for help on Twitter and a really helpful first blog post (created for me, so honored!) from Andy O’Donnell here. (He’s super nice, follow him on Twitter too!) Andy got me going, which I am SO grateful for… but then I ran into an error. And then another error. And another. You get the idea."/>
+
+  <meta itemprop="name" content="Calling Multiple APIs in One Power BI Report (And All the Work-Arounds That Required)">
+<meta itemprop="description" content="So, this one was a lot more difficult than it should have been. It started with a plea for help on Twitter and a really helpful first blog post (created for me, so honored!) from Andy O’Donnell here. (He’s super nice, follow him on Twitter too!) Andy got me going, which I am SO grateful for… but then I ran into an error. And then another error. And another. You get the idea."><meta itemprop="datePublished" content="2023-02-02T14:49:05-05:00" />
+<meta itemprop="dateModified" content="2023-02-02T14:49:05-05:00" />
+<meta itemprop="wordCount" content="1851">
+<meta itemprop="keywords" content="how to,apis,power bi," />
+
+  
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="https:/" class="capitalize font-extrabold text-2xl">
+    
+    <img src="https:/images/LTS2.png" alt="Lindsay T. Shelton" class="h-8 max-w-full" />
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
+
+    
+    <li><a href="https:/blog">Blog</a></li>
+    
+    <li><a href="https:/page/about/">About</a></li>
+    
+    <li><a href="https:/tags">Tags</a></li>
+    
+
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main class="flex-1">
+  
+  
+
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">Calling Multiple APIs in One Power BI Report (And All the Work-Arounds That Required)</h1>
+    
+    <h5 class="text-sm flex items-center flex-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      Posted on 
+  
+    February 2, 2023
+  
+
+
+      
+        &nbsp;&bull;&nbsp;
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      9&nbsp;minutes
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      1851&nbsp;words
+      
+    </h5>
+    
+
+    <details id="TableOfContents" class="px-4 mt-4 bg-gray-100 dark:bg-gray-700 rounded toc">
+    <summary class="flex items-center font-bold py-2 px-4 cursor-pointer justify-between select-none text-black dark:text-white">
+      <span>Table of contents</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <polyline points="6 9 12 15 18 9"></polyline>
+     </svg>
+    </summary>
+
+    <ul class="mt-2 pb-4">
+        
+
+        
+        <li>
+        <a href="#the-use-case">The Use Case</a>
+        
+
+        
+        </li><li>
+        <a href="#the-simple-version-of-the-answer">The Simple Version of the Answer</a>
+        
+
+        
+        </li><li>
+        <a href="#the-longer-version--the-dataflows">The Longer Version – The Dataflows</a>
+        
+
+        
+        </li><li>
+        <a href="#mo-progress-mo-credential-problems">Mo’ Progress, Mo’ Credential Problems</a>
+        
+
+        
+        </li><li>
+        <a href="#the-last-laugh">The Last Laugh</a>
+        </li></ul>
+  </details>
+
+    <p>So, this one was a lot more difficult than it should have been. It started with a plea for help on Twitter and a really helpful first blog post (created for me, so honored!) from <a href="https://ayyohhdee365.wordpress.com/2023/01/30/incremental-power-bi-dataflow-refreshes-for-api-calls/">Andy O’Donnell here</a>. (He’s super nice, <a href="https://twitter.com/AyyOhhDee">follow him on Twitter</a> too!) Andy got me going, which I am SO grateful for… but then I ran into an error. And then another error. And another. You get the idea.</p>
+<p>This blog post is for anyone who encounters this in their desperate web searches, hopefully to keep them company and guide them in their wanderings towards a solution. It took me a few days of wandering to find my solution, so maybe you will find your own a little faster than that now.</p>
+<h2 id="the-use-case">The Use Case</h2>
+<p>This actually came from another team in my department. The original question? “Hey, I think I might need a Power Automate flow”. Of course, I was ecstatic immediately and dove into helping my coworker however I could. Our end result did not, in fact, involve Power Automate, so I feel a little deceived, but I was ensnared in the problem solving process regardless and knew I had no choice but to carry on until I found a solution, for my own sanity.</p>
+<p>I’m no expert on this product, but my coworker works with ServiceNow, and he wanted to hit their APIs for a Power BI report he was working on building. However, they had a limit of 4 API hits at once, and he had at least 5 calls he was wanting to make. Neither of us were aware of any way to stagger calls made directly from Power BI’s Web data connection, so off I went to the races to see what I could find.</p>
+<h2 id="the-simple-version-of-the-answer">The Simple Version of the Answer</h2>
+<p>The simple version was, <a href="https://ayyohhdee365.wordpress.com/2023/01/30/incremental-power-bi-dataflow-refreshes-for-api-calls/">as Andy so kindly wrote up for me</a>, to create dataflows for each API. Within Power BI Web (what do we call that? I struggle to find a good name, and just calling it Power BI seems to be too vague), you can set up a refresh schedule for each API so they aren’t on top of each other. Then, in your workbook, you can pull in each dataflow as your data source and ta-da! Done! Easy!</p>
+<p>That’s what I thought.</p>
+<p>So, while Andy did lay out the whole process very nicely, this post isn’t for the people who can go through the process he did without errors. This post is for the rest of us. Those with many, many errors.</p>
+<h2 id="the-longer-version--the-dataflows">The Longer Version – The Dataflows</h2>
+<p>So, the first series of errors came from the dataflows. I couldn’t get my authentication to work at all. I wish I had saved all of the errors that I got so that people searching for the same could come here, but here’s a few that I did find in my History:</p>
+<ul>
+<li>“Invalid credentials for web source”</li>
+<li>“Power BI says my data credentials aren’t correct when they are”</li>
+<li>“Connection could not be created”</li>
+</ul>
+<p>You get the idea. I don’t want to admit to how many times I retried that username and password, thinking “I’m the problem, it’s me” (I get it, Taylor Swift).</p>
+<p>If you are here for answers as to why my original method of doing it was giving me this error, I’m sorry to say you will be disappointed. If you are here to find out how I got around it, then welcome – keep reading.</p>
+<ol>
+<li>Get data from the API in Power BI Desktop from Web API
+…wait, isn’t the whole thing that we are doing this differently? Stay with me, there’s a method to the madness.</li>
+</ol>
+<p>So, this is really quite a few steps, but I’ll try to shorten it. Go get data from the web and put in your web API URL.</p>
+<p><img src="https:/images/calling-multiple-apis-in-one-power-bi-report1.png" alt="Placeholder">
+2. For the authentication after you click Ok, use whatever your API calls for here. Mine called for Basic auth, so I put in my service account username and password.
+3. That should open up your data in a Power Query editor window. That’s great – we don’t actually care about this data here. Click the “Advanced Editor” button.
+<img src="https:/images/calling-multiple-apis-in-one-power-bi-report2.png" alt="Placeholder">
+THIS holds the good stuff that we actually need for our first workaround – the M code!</p>
+<ol start="4">
+<li>Copy all of the code you see here – it should look something like mine, starting with “let” and ending with “in… (something)”. I’ve just crossed out the API URL in mine, but other than that, I didn’t write anything here – Power BI calculated it all for me when I imported the web API.
+<img src="https:/images/calling-multiple-apis-in-one-power-bi-report3.png" alt="Placeholder"></li>
+<li>Go to Power BI on the web. There’s licensing considerations here, but I’m not going to go into that because I frankly don’t understand it.</li>
+<li>Go to a workspace that you can use. For reference, the one I’m using was marked with a diamond icon that says it has “Premium capacity”.</li>
+<li>Click New and then Dataflow.</li>
+<li>You may get a pop-up that asks if you want to build a datamart instead. I said no and carried on.</li>
+<li>You now have a window to start creating your dataflow. Click the button that says “Add new tables” (if you need screenshots for these parts, see Andy’s blog)</li>
+<li>Click “Other” for your category, and you are going to select that you want to build a “Blank Query” for your data source.</li>
+<li>The blank query template should look familiar – code starting with “let” and ending with “in… (something)”. You are going to paste in your code from Power BI Desktop. Do NOT hit enter yet!</li>
+</ol>
+<p>This is where I encountered the need for workaround 2, aka more credential problems.</p>
+<h2 id="mo-progress-mo-credential-problems">Mo’ Progress, Mo’ Credential Problems</h2>
+<p>We are going to build our own Authorization Header into our M code for steps 12-14. Low code just got low-to-mid code, people. Don’t worry, there’s just some more copying and pasting involved, but very precise copying and pasting.</p>
+<p>So, basically I couldn’t get the credentials manager in Power BI to work for me, so I had to (with <a href="https://community.powerbi.com/t5/Desktop/REST-API-web-data-source-Authentication-Header-is-gone/td-p/1009630">the help</a> of a <a href="https://community.powerbi.com/t5/Power-Query/Connect-to-Rest-API-Basic-Auth/td-p/921199">few questions</a> on the <a href="https://social.technet.microsoft.com/Forums/office/en-US/11d4347c-0332-4dea-b270-a2dcd911c8b0/passing-username-and-password-in-basic-authentication?forum=powerquery">Tech Community</a>) come up a way to send in the credentials in the API call itself. It’s not good practice to put a username and password (I had basic authentication, remember) directly into code, so a quick and easy way around this was to use <a href="https://www.base64encode.org/">Base64Encode.org</a> to create a hashed string for me to use.</p>
+<p>It seems scary, but let me break it down as much as I can. If you are using Basic authentication, aka a username and a password, this method will work for you. (If you are using Anonymous, I don’t even know why you are here, you should already be 5 steps past here, you lucky duck!).</p>
+<p>Take your username and your password and paste them into the Base64Encode website in one string, formatted as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>username:password
+</span></span></code></pre></div><p>No spaces, just username colon password. Click ENCODE and it will give you a string of what looks like gibberish characters. Copy those into Notepad or OneNote to paste into your Header we are going to build.</p>
+<p>Now that we have your username and password encoded, we can put them into the proper authentication header format we will need for this. Paste them into this where I have “username:password”. Yours will look longer, but remember – whatever the Base64Encode site gives you in the bottom box, put that where I have “username:password” (no quotation marks).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>[Headers =[#&#34;Authorization&#34;=&#34;Basic username:password&#34;]])),
+</span></span></code></pre></div><p>Once you have this string loaded in your clipboard, we are ready to insert it into your big M code block. If you are worried about this, just remember that the M code came from Power BI Desktop, and we can always get back to it again if you mess it up!</p>
+<p>So, here’s the first 4 lines of my “sanitized for public consumption” M code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>let
+</span></span><span style="display:flex;"><span>    Source = Json.Document(Web.Contents(&#34;https://thisisafakeAPI.com&#34;)),
+</span></span><span style="display:flex;"><span>    #&#34;Converted to Table&#34; = Table.FromRecords({Source}),
+</span></span><span style="display:flex;"><span>    #&#34;Expanded result&#34; = Table.ExpandListColumn(#&#34;Converted to Table&#34;, &#34;result&#34;),
+</span></span></code></pre></div><p>You will put your headers code right after the ending quotation mark of your API URL, with a comma added first! So with the headers code put into mine, it would now look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>let
+</span></span><span style="display:flex;"><span>    Source = Json.Document(Web.Contents(&#34;https://thisisafakeAPI.com&#34;,[Headers =[#&#34;Authorization&#34;=&#34;Basic username:password&#34;]])),)),
+</span></span><span style="display:flex;"><span>    #&#34;Converted to Table&#34; = Table.FromRecords({Source}),
+</span></span><span style="display:flex;"><span>    #&#34;Expanded result&#34; = Table.ExpandListColumn(#&#34;Converted to Table&#34;, &#34;result&#34;),
+</span></span></code></pre></div><p>Mine isn’t quite right still – I have some extra ending parentheses and commas, so take out the two spare ones and the extra comma so it looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>let
+</span></span><span style="display:flex;"><span>    Source = Json.Document(Web.Contents(&#34;https://thisisafakeAPI.com&#34;,[Headers =[#&#34;Authorization&#34;=&#34;Basic username:password&#34;]])),
+</span></span><span style="display:flex;"><span>    #&#34;Converted to Table&#34; = Table.FromRecords({Source}),
+</span></span><span style="display:flex;"><span>    #&#34;Expanded result&#34; = Table.ExpandListColumn(#&#34;Converted to Table&#34;, &#34;result&#34;),
+</span></span></code></pre></div><p>The good thing is that Power BI will also tell you if there’s something wrong, and if you get confused with all of the punctuation marks and copy/pasting, just take a deep breath and start over.</p>
+<p>There’s one more caveat we have to work around regarding authentication. It’s the fun that never ends.</p>
+<ol start="12">
+<li>Put that code in as a blank query.</li>
+<li>Click “Next” to save it</li>
+<li>Now is the last authentication hurdle. Maybe. Power BI will tell you this:
+<img src="https:/images/calling-multiple-apis-in-one-power-bi-report5.png" alt="Placeholder"></li>
+</ol>
+<p>When you click “Configure connection”, set things up like this:</p>
+<p><img src="https:/images/calling-multiple-apis-in-one-power-bi-report4.png" alt="Placeholder"></p>
+<p>I know, it’s not actually an anonymous connection. It’s zany. This is just what I got to work.</p>
+<ol start="15">
+<li>Click “Connect” with your settings like they are above.</li>
+<li>Rename “Query” on the left (or else it will show up as “Query” in your workbook and be confusing with a bunch of other “query”s).</li>
+<li>Click “Save and exit”.</li>
+<li>Save your dataflow with a meaningful name.</li>
+<li>REFRESH YOUR FLOW NOW. This step is not well documented and is essential. It will say “table is empty” if you do not refresh the flow first.</li>
+<li>Go back to the workspace home page to see if there were any errors in the data refresh. If you don’t click fast enough to refresh when that pop-up window gives you the option, this is also where you go to refresh on-demand as well.</li>
+<li>Go back to Power BI Desktop.</li>
+<li>Click “Get data” and select “Dataflows”.</li>
+<li>Navigate through your folders. My folder structure was Dataflows -&gt; Workspaces -&gt; Information Technology (the name of my workspace) -&gt; Dataflow Name -&gt; Query Name</li>
+</ol>
+<p>And voila! Hopefully.</p>
+<h2 id="the-last-laugh">The Last Laugh</h2>
+<p>A fun post-script for you. This was working for my co-worker that I helped, but as I was typing this up, he was getting ready to check the queries and make sure they were what he really wanted to bring in and he got a permission error. We found the <a href="https://powerbi.microsoft.com/en-us/blog/announcing-power-bi-dataflows-general-availability/">“take over” button</a>, but then… the data flows started having refresh errors.</p>
+<p>We did some troubleshooting, and finally, for fun, I said… let’s just have you try to connect the way you are supposed to be able to connect. The way that Andy’s blog said you can connect. And guess what, dear Reader?</p>
+<p>It worked just fine for him.</p>
+<p>So, I hope that this blog helps anyone who is unfortunate like me and can’t get this working for the life of them, but may you be luckier like my co-worker and get it working smoothly the way it was intended to work from the start.</p>
+
+  </article>
+<div class="px-2 mb-2">
+  
+  <script src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</div>
+<div class="bg-pink-100 dark:bg-gray-900">
+  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Follow me</div>
+      <p class="opacity-60">Follow along for Power Platform, M365, and cat goodness</p>
+    </div>
+
+    <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
+      
+
+      
+      <li>
+        <a
+          href="https://twitter.com/LShelton_Tech"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a
+          href="https://linkedin.com/in/lindsaytshelton"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    </ul>
+  </div>
+</div>
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    Copyright © 2023 - Lindsay Shelton · All rights reserved
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https:/js/scripts.min.js"></script>
+
+
+
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
+</html>

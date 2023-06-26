@@ -3,6 +3,7 @@ metaDataFormat = "yaml"
 title = "Lindsay T. Shelton"
 theme = "blist"
 canonifyurls = true
+builddrafts = true 
 
 DefaultContentLanguage = "en"
 DefaultContentLanguageInSubdir = true

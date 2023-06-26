@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="https:/images/LTS.png">
+
+  <title>
+  The Painful Process of Using Custom Values for OneNote Power Automate References - Lindsay T. Shelton
+  </title>
+  <meta name="description" content="I didn’t realize how painful this process would be until I embarked upon it, and so, Dear Reader, I’m looking to combine the resources that helped me into one place to help you if you are to find yourself in a similar scenario.
+The Use Case I was recently given a scenario where, as an important step in a proposed new process, a OneNote notebook nestled within a private Teams channel would be populated with a new page whenever a flow was triggered." />
+  <meta name="author" content="Lindsay Shelton" />
+  <meta name="generator" content="Hugo 0.111.3"><link
+    rel="stylesheet"
+    href="https:/css/styles.min.c0846aac9db6c87efe354bad93a5e4432ef35cc12598aeed07df50323381cc06.css"
+    integrity="sha256-wIRqrJ22yH7+NUutk6XkQy7zXMElmK7tB99QMjOBzAY="
+  />
+  
+  
+
+  <meta property="og:title" content="The Painful Process of Using Custom Values for OneNote Power Automate References" />
+<meta property="og:description" content="I didn’t realize how painful this process would be until I embarked upon it, and so, Dear Reader, I’m looking to combine the resources that helped me into one place to help you if you are to find yourself in a similar scenario.
+The Use Case I was recently given a scenario where, as an important step in a proposed new process, a OneNote notebook nestled within a private Teams channel would be populated with a new page whenever a flow was triggered." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https:/blog/202303the-painful-process-of-using-custom-values-for-onenote-power-automate-references/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-03-15T14:49:05-05:00" />
+<meta property="article:modified_time" content="2023-03-15T14:49:05-05:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Painful Process of Using Custom Values for OneNote Power Automate References"/>
+<meta name="twitter:description" content="I didn’t realize how painful this process would be until I embarked upon it, and so, Dear Reader, I’m looking to combine the resources that helped me into one place to help you if you are to find yourself in a similar scenario.
+The Use Case I was recently given a scenario where, as an important step in a proposed new process, a OneNote notebook nestled within a private Teams channel would be populated with a new page whenever a flow was triggered."/>
+
+  <meta itemprop="name" content="The Painful Process of Using Custom Values for OneNote Power Automate References">
+<meta itemprop="description" content="I didn’t realize how painful this process would be until I embarked upon it, and so, Dear Reader, I’m looking to combine the resources that helped me into one place to help you if you are to find yourself in a similar scenario.
+The Use Case I was recently given a scenario where, as an important step in a proposed new process, a OneNote notebook nestled within a private Teams channel would be populated with a new page whenever a flow was triggered."><meta itemprop="datePublished" content="2023-03-15T14:49:05-05:00" />
+<meta itemprop="dateModified" content="2023-03-15T14:49:05-05:00" />
+<meta itemprop="wordCount" content="968">
+<meta itemprop="keywords" content="onenote,power automate," />
+
+  
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="https:/" class="capitalize font-extrabold text-2xl">
+    
+    <img src="https:/images/LTS2.png" alt="Lindsay T. Shelton" class="h-8 max-w-full" />
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
+
+    
+    <li><a href="https:/blog">Blog</a></li>
+    
+    <li><a href="https:/page/about/">About</a></li>
+    
+    <li><a href="https:/tags">Tags</a></li>
+    
+
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main class="flex-1">
+  
+  
+
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">The Painful Process of Using Custom Values for OneNote Power Automate References</h1>
+    
+    <h5 class="text-sm flex items-center flex-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      Posted on 
+  
+    March 15, 2023
+  
+
+
+      
+        &nbsp;&bull;&nbsp;
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      5&nbsp;minutes
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      968&nbsp;words
+      
+    </h5>
+    
+
+    <details id="TableOfContents" class="px-4 mt-4 bg-gray-100 dark:bg-gray-700 rounded toc">
+    <summary class="flex items-center font-bold py-2 px-4 cursor-pointer justify-between select-none text-black dark:text-white">
+      <span>Table of contents</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <polyline points="6 9 12 15 18 9"></polyline>
+     </svg>
+    </summary>
+
+    <ul class="mt-2 pb-4">
+        
+
+        
+        <li>
+        <a href="#the-use-case">The Use Case</a>
+        
+
+        
+        </li><li>
+        <a href="#the-initial-flow">The Initial Flow</a>
+        
+
+        
+        </li><li>
+        <a href="#the-notebook-key">The Notebook Key</a>
+        
+
+        
+        </li><li>
+        <a href="#the-notebook-section-id">The Notebook Section ID</a>
+        
+
+        
+        </li><li>
+        <a href="#can-we-make-a-page-yet">Can We Make A Page Yet?</a>
+        
+
+        
+        </li><li>
+        <a href="#fine-lets-add-a-page-title">Fine, Let’s Add a Page Title</a>
+        </li></ul>
+  </details>
+
+    <p>I didn’t realize how painful this process would be until I embarked upon it, and so, Dear Reader, I’m looking to combine the resources that helped me into one place to help you if you are to find yourself in a similar scenario.</p>
+<h2 id="the-use-case">The Use Case</h2>
+<p>I was recently given a scenario where, as an important step in a proposed new process, a OneNote notebook nestled within a private Teams channel would be populated with a new page whenever a flow was triggered. The contents of that page aren’t important for what we are doing here, and oddly, neither was it important that the OneNote notebook was nestled in a private Teams channel. I thought this would be the biggest hurdle.</p>
+<p><img src="https:/images/the-painful-process-of-using-custom-values-for-onenote-power-automate-references1.jpg" alt="Placeholder"></p>
+<p>So, I knew that the private Teams channels names were going to be a combination of the manager and employee names. That meant that I would have to manually input the Notebook Key in the OneNote actions. That also meant I’d have to manually input the Section ID. Two seemingly simple things that were very, very not simple. I will attempt to make them more simple here (along with citations for my sources, as I didn’t solve this in a vacuum).</p>
+<h2 id="the-initial-flow">The Initial Flow</h2>
+<p>The first several steps of my flow were to get the names of my user and their manager (hello, Megan Bowen. It’s been a while) and combine them together in a way that made sense to me.</p>
+<p><img src="https:/images/the-painful-process-of-using-custom-values-for-onenote-power-automate-references2.png" alt="Placeholder"></p>
+<h2 id="the-notebook-key">The Notebook Key</h2>
+<p>The first hurdle: the Notebook Key. This seems like it would be words, right? Wrong.</p>
+<p>What they really want here is the URL that the notebook is at… sort of… with a little fancy stuff at the start. <a href="https://natechamberlain.com/2022/06/29/power-automate-solution-onenote-action-errors-involving-invalid-or-inaccessible-notebook-keys-and-sections/">Nate Chamberlain’s blog</a> got me part of the way there (hi Nate!), but whatever I was trying wasn’t working for my particular notebook scenario.</p>
+<p>So, I cheated.</p>
+<p>I used the “Get recent notebooks” action and got the key from there, and it was something I never would have tried, because I had to put the name of my notebook in at the end… twice?</p>
+<p>Nate’s Method (in case that’s what works for you – replace what’s in caps with your content, spaces are okay in the notebook name):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>NOTEBOOK NAME|$|https://COMPANY.sharepoint.com/sites/SITENAME/NOTEBOOK LOCATION/NOTEBOOK NAME
+</span></span></code></pre></div><p>However, here’s where mine ended up:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>NOTEBOOK NAME|$|https://lindsaytshelton.sharepoint.com/sites/Home-PrivateEmployeeManagerChannel/Shared Documents/NOTEBOOK NAME/NOTEBOOK NAME
+</span></span></code></pre></div><p>Again, this was a notebook I created within Teams within a private channel, originally called Private Employee Manager Channel before a rename (so keep that in mind if you are just digging for a URL). I highly recommend just running that action instead of building it yourself, however, as I was having no luck.</p>
+<p>I put my Notebook Key in a Compose action (putting it in a variable would work just as well) so that you aren’t trying to copy and paste that thing all over the place.</p>
+<p><img src="https:/images/the-painful-process-of-using-custom-values-for-onenote-power-automate-references3.png" alt="Placeholder"></p>
+<p>So, my first Compose action is building the notebook name (Lindsay Shelton and Megan Bowen in this case). The second references the first for every time I need NOTEBOOK NAME, and now I can reference the second Compose action every time I need my Notebook Key.</p>
+<h2 id="the-notebook-section-id">The Notebook Section ID</h2>
+<p>This was even more annoying than the Notebook Key, if you can believe it.</p>
+<p>Run the “Get sections in notebook” action using your new Notebook Key.</p>
+<p><img src="https:/images/the-painful-process-of-using-custom-values-for-onenote-power-automate-references4.png" alt="Placeholder"></p>
+<p>The value you want to grab and reference is super intuitive.</p>
+<p><img src="https:/images/the-painful-process-of-using-custom-values-for-onenote-power-automate-references5.jpg" alt="Placeholder"></p>
+<p>Anyway, you want to grab the “pagesUrl” value. Yes, it’s another URL, but an actual URL this time.</p>
+<p>That’s the short version. Here’s the longer version of how to use that value, modified by me but thanks to an anonymous poster on the Power Users forum.</p>
+<p>You want to initialize a new variable called pageURL. It should be a string, and leave it blank for now.</p>
+<p><img src="https:/images/the-painful-process-of-using-custom-values-for-onenote-power-automate-references6.png" alt="Placeholder"></p>
+<p>This is the most complicated part, but bear with me.</p>
+<p>Make a Condition, and set the “Section name” dynamic content value as equal to whatever your section name is called. Mine is called “Goals and Actions”, so I just set it equal to that string.</p>
+<p>We aren’t going to use the “No” side. In the “Yes” side, add a Parse JSON block, and paste in this JSON:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    &#34;type&#34;: &#34;object&#34;,
+</span></span><span style="display:flex;"><span>    &#34;properties&#34;: {
+</span></span><span style="display:flex;"><span>        &#34;pagesURL&#34;: {
+</span></span><span style="display:flex;"><span>            &#34;type&#34;: &#34;string&#34;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Set the “Content” in that JSON block to “Current item”. So far, it should look like this:</p>
+<p><img src="https:/images/the-painful-process-of-using-custom-values-for-onenote-power-automate-references7.png" alt="Placeholder"></p>
+<p>That’s the hardest part! Still in the “Yes” section, right after Parse JSON, add a Set Variable block. Set your “pageURL” variable to the value of “pagesURL”, which should be new dynamic content available to you after you have added the Parse JSON block.</p>
+<h2 id="can-we-make-a-page-yet">Can We Make A Page Yet?</h2>
+<p>Yes, yes we can! Add one more block – Create page in a section.</p>
+<p>You will want to select “Custom value” for both the Notebook Key and the Notebook section. Remember, the Notebook Key should be that second Compose block if you set yours up like mine, and the Notebook section should be your pageURL variable.</p>
+<p>Once you run it, you should see this!</p>
+<p><img src="https:/images/the-painful-process-of-using-custom-values-for-onenote-power-automate-references8.png" alt="Placeholder"></p>
+<p>…except there’s no page title, what the hell?</p>
+<h2 id="fine-lets-add-a-page-title">Fine, Let’s Add a Page Title</h2>
+<p>We made it hard enough to just add a page, why not go one step further and give it a title?</p>
+<p>Out of the box, you can’t give the page a title. So, we have to rely on a little HTML styling. Click on the Code View button (circled below) in the Page Content section of your last action.</p>
+<p><img src="https:/images/the-painful-process-of-using-custom-values-for-onenote-power-automate-references9.png" alt="Placeholder"></p>
+<p>From here, we need to add some basic HTML to get a title. Here’s the code I used, and then you can see what output it gave me.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">title</span>&gt;New Goal&lt;/<span style="color:#ff79c6">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">p</span>&gt;Test test test&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span></code></pre></div><p><img src="https:/images/the-painful-process-of-using-custom-values-for-onenote-power-automate-references10.png" alt="Placeholder"></p>
+<p>So, get creative with it – I’m sure I will as this project rolls along, but that’s the basics of it!</p>
+
+  </article>
+<div class="px-2 mb-2">
+  
+  <script src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</div>
+<div class="bg-pink-100 dark:bg-gray-900">
+  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Follow me</div>
+      <p class="opacity-60">Follow along for Power Platform, M365, and cat goodness</p>
+    </div>
+
+    <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
+      
+
+      
+      <li>
+        <a
+          href="https://twitter.com/LShelton_Tech"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a
+          href="https://linkedin.com/in/lindsaytshelton"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    </ul>
+  </div>
+</div>
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    Copyright © 2023 - Lindsay Shelton · All rights reserved
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https:/js/scripts.min.js"></script>
+
+
+
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
+</html>

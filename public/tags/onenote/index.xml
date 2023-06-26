@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>onenote on Lindsay T. Shelton</title>
+    <link>https:/tags/onenote/</link>
+    <description>Recent content in onenote on Lindsay T. Shelton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Mar 2023 14:49:05 -0500</lastBuildDate><atom:link href="https:/tags/onenote/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use Power Automate to Send an Email Reminder 24 Hours Before an Event</title>
+      <link>https:/blog/202303use-power-automate-to-send-an-email-reminder-24-hours-before-an-event/</link>
+      <pubDate>Mon, 27 Mar 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202303use-power-automate-to-send-an-email-reminder-24-hours-before-an-event/</guid>
+      <description>I couldn’t believe this wasn’t a template already when I searched, so I figured – blog post it is! Two in a month, I did it again!
+The Use Case This one is pretty simple. A user reached out and said she had a idea for how to use Power Automate, but she wasn’t sure how to make it happen. This immediately spikes my adrenaline, and I start searching triggers and actions right away.</description>
+    </item>
+    
+    <item>
+      <title>The Painful Process of Using Custom Values for OneNote Power Automate References</title>
+      <link>https:/blog/202303the-painful-process-of-using-custom-values-for-onenote-power-automate-references/</link>
+      <pubDate>Wed, 15 Mar 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202303the-painful-process-of-using-custom-values-for-onenote-power-automate-references/</guid>
+      <description>I didn’t realize how painful this process would be until I embarked upon it, and so, Dear Reader, I’m looking to combine the resources that helped me into one place to help you if you are to find yourself in a similar scenario.
+The Use Case I was recently given a scenario where, as an important step in a proposed new process, a OneNote notebook nestled within a private Teams channel would be populated with a new page whenever a flow was triggered.</description>
+    </item>
+    
+  </channel>
+</rss>

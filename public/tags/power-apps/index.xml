@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>power apps on Lindsay T. Shelton</title>
+    <link>https:/tags/power-apps/</link>
+    <description>Recent content in power apps on Lindsay T. Shelton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 01 Jun 2023 14:49:05 -0500</lastBuildDate><atom:link href="https:/tags/power-apps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Microsoft Power Platform Conference – Trip of a Lifetime</title>
+      <link>https:/blog/202306microsoft-power-platform-conference-trip-of-a-lifetime/</link>
+      <pubDate>Thu, 01 Jun 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202306microsoft-power-platform-conference-trip-of-a-lifetime/</guid>
+      <description>I was going through a really rough time. I had experienced a loss that so many do experience – one of my 14 year old littermate kitties, Archie, had taken a sudden turn and had to be put to sleep. It was almost my birthday and I had lost one of my beloved cats and I was feeling very sorry for myself.
+However, it was time to pull myself together and pack my bags, because I was headed to the inaugural Power Platform Conference in Orlando, FL all my myself.</description>
+    </item>
+    
+    <item>
+      <title>Sending Flow Result Messages Back to a Power App</title>
+      <link>https:/blog/202304sending-flow-result-messages-back-to-a-power-app/</link>
+      <pubDate>Fri, 14 Apr 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202304sending-flow-result-messages-back-to-a-power-app/</guid>
+      <description>Bing AI Image Creator got a little weird, but let’s go with it. The others were far weirder.
+Recently I was asked if I could add a success message to a Power App – something to indicate that they’ve clicked the button. I added a beautiful spinner and dusted off my hands, job well done.
+Well, no, they wanted to know that the Power Automate flow that the button triggered had actually run successfully.</description>
+    </item>
+    
+    <item>
+      <title>How To: Create a Name Pronunciation Database Using the Power Platform (now with samples links!)</title>
+      <link>https:/blog/202209how-to-create-a-name-pronunciation-database-using-the-power-platform/</link>
+      <pubDate>Fri, 30 Sep 2022 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202209how-to-create-a-name-pronunciation-database-using-the-power-platform/</guid>
+      <description>The Problem and Requirements I work at a medical research institute that is incredibly diverse. We have scientists from all over the globe, which can lead to some frustration on everyone’s part when it comes to the diverse names that these employees have. To be clear – it’s not just an issue of names that aren’t “American” causing “problems” – we have so many immigrant employees that even names that may seem straightforward, like “Lindsay”, can be confusing.</description>
+    </item>
+    
+  </channel>
+</rss>

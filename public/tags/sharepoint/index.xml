@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sharepoint on Lindsay T. Shelton</title>
+    <link>https:/tags/sharepoint/</link>
+    <description>Recent content in sharepoint on Lindsay T. Shelton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 24 May 2023 14:49:05 -0500</lastBuildDate><atom:link href="https:/tags/sharepoint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To: Block Downloads with Stream on SharePoint</title>
+      <link>https:/blog/202305how-to-block-downloads-with-stream-on-sharepoint/</link>
+      <pubDate>Wed, 24 May 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202305how-to-block-downloads-with-stream-on-sharepoint/</guid>
+      <description>Anyone else stuck in a slow migration nightmare? That may be a tad dramatic, but…
+I gotta be me, y’know?
+Anyway, a big hurdle came up in our Stream Classic migration with a user who had a really good question. How can we block downloads with this new-fangled Stream option? It was a setting within Stream Classic that was being used by this department extenstively, and it was actually a legal requirement.</description>
+    </item>
+    
+    <item>
+      <title>Utilizing the Contents of a SharePoint Image Column Elsewhere</title>
+      <link>https:/blog/202302utilizing-the-contents-of-a-sharepoint-image-column-elsewhere/</link>
+      <pubDate>Mon, 27 Feb 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202302utilizing-the-contents-of-a-sharepoint-image-column-elsewhere/</guid>
+      <description>So I recently met with someone who had a conundrum. They had a SharePoint list with an Image type column, relatively new-ish, and they wanted to post the contents of this column to Teams on a regular cadence, along with other text column content. They had tried every dynamic content option related to the Image column in Power Automate and nothing was working. I found quite a few blog posts that got us close, but not all the way.</description>
+    </item>
+    
+    <item>
+      <title>Approvals Using SharePoint Groups</title>
+      <link>https:/blog/202302approvals-using-sharepoint-groups/</link>
+      <pubDate>Wed, 15 Feb 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202302approvals-using-sharepoint-groups/</guid>
+      <description>At my office, we have a lot of documents that undergo an annual review process. I was tasked pretty early on in my time here to help move this process from an Access database into the cloud. I could go on and on about the intricacies of what we set up, but I wanted to zero in on just one feature of the Power Automate flows that are set up: the group approval.</description>
+    </item>
+    
+  </channel>
+</rss>

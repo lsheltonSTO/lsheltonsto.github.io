@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="https:/images/LTS.png">
+
+  <title>
+  How To: Display Your M365 Group in Outlook (If You Can&#39;t Find It) - Lindsay T. Shelton
+  </title>
+  <meta name="description" content="If you’ve spent much time with the Microsoft 365 eco-system, then you know as well as I do that there are countless ways to create new M365 groups. Everyone has their own preferences, certainly, and there isn’t really a need to pick only one method. What gets created and set-up as a result of creating a group, however, DOES change depending on which method you pick, which leads me to the use case that prompted this blog." />
+  <meta name="author" content="Lindsay Shelton" />
+  <meta name="generator" content="Hugo 0.111.3"><link
+    rel="stylesheet"
+    href="https:/css/styles.min.c0846aac9db6c87efe354bad93a5e4432ef35cc12598aeed07df50323381cc06.css"
+    integrity="sha256-wIRqrJ22yH7+NUutk6XkQy7zXMElmK7tB99QMjOBzAY="
+  />
+  
+  
+
+  <meta property="og:title" content="How To: Display Your M365 Group in Outlook (If You Can&#39;t Find It)" />
+<meta property="og:description" content="If you’ve spent much time with the Microsoft 365 eco-system, then you know as well as I do that there are countless ways to create new M365 groups. Everyone has their own preferences, certainly, and there isn’t really a need to pick only one method. What gets created and set-up as a result of creating a group, however, DOES change depending on which method you pick, which leads me to the use case that prompted this blog." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https:/blog/202102how-to-display-your-m365-group-in-outlook/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-02-24T14:49:05-05:00" />
+<meta property="article:modified_time" content="2021-02-24T14:49:05-05:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How To: Display Your M365 Group in Outlook (If You Can&#39;t Find It)"/>
+<meta name="twitter:description" content="If you’ve spent much time with the Microsoft 365 eco-system, then you know as well as I do that there are countless ways to create new M365 groups. Everyone has their own preferences, certainly, and there isn’t really a need to pick only one method. What gets created and set-up as a result of creating a group, however, DOES change depending on which method you pick, which leads me to the use case that prompted this blog."/>
+
+  <meta itemprop="name" content="How To: Display Your M365 Group in Outlook (If You Can&#39;t Find It)">
+<meta itemprop="description" content="If you’ve spent much time with the Microsoft 365 eco-system, then you know as well as I do that there are countless ways to create new M365 groups. Everyone has their own preferences, certainly, and there isn’t really a need to pick only one method. What gets created and set-up as a result of creating a group, however, DOES change depending on which method you pick, which leads me to the use case that prompted this blog."><meta itemprop="datePublished" content="2021-02-24T14:49:05-05:00" />
+<meta itemprop="dateModified" content="2021-02-24T14:49:05-05:00" />
+<meta itemprop="wordCount" content="1126">
+<meta itemprop="keywords" content="how to,microsoft teams,microsoft outlook," />
+
+  
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="https:/" class="capitalize font-extrabold text-2xl">
+    
+    <img src="https:/images/LTS2.png" alt="Lindsay T. Shelton" class="h-8 max-w-full" />
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
+
+    
+    <li><a href="https:/blog">Blog</a></li>
+    
+    <li><a href="https:/page/about/">About</a></li>
+    
+    <li><a href="https:/tags">Tags</a></li>
+    
+
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main class="flex-1">
+  
+  
+
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">How To: Display Your M365 Group in Outlook (If You Can&#39;t Find It)</h1>
+    
+    <h5 class="text-sm flex items-center flex-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      Posted on 
+  
+    February 24, 2021
+  
+
+
+      
+        &nbsp;&bull;&nbsp;
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      6&nbsp;minutes
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      1126&nbsp;words
+      
+    </h5>
+    
+
+    <details id="TableOfContents" class="px-4 mt-4 bg-gray-100 dark:bg-gray-700 rounded toc">
+    <summary class="flex items-center font-bold py-2 px-4 cursor-pointer justify-between select-none text-black dark:text-white">
+      <span>Table of contents</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <polyline points="6 9 12 15 18 9"></polyline>
+     </svg>
+    </summary>
+
+    <ul class="mt-2 pb-4">
+        
+
+        
+        <li>
+        <a href="#the-problem">The Problem</a>
+        
+
+        
+        </li><li>
+        <a href="#the-clue">The Clue</a>
+        
+
+        
+        </li><li>
+        <a href="#the-solution">The Solution</a>
+        </li></ul>
+  </details>
+
+    <p>If you’ve spent much time with the Microsoft 365 eco-system, then you know as well as I do that there are countless ways to create new M365 groups. Everyone has their own preferences, certainly, and there isn’t really a need to pick only one method. What gets created and set-up as a result of creating a group, however, DOES change depending on which method you pick, which leads me to the use case that prompted this blog.</p>
+<h2 id="the-problem">The Problem</h2>
+<p>A coworker’s client was working on cleaning up their groups, but one was an older, larger group that had content already associated with it. So, they didn’t want to delete that group and start from scratch at the risk of losing that content.</p>
+<p>The problem we ran into? In the Outlook Web App, even when searching for that group (henceforth known as Example Group), it wasn’t showing up in the left nav. It showed that we had joined the group, and one of the groups that had been remade was showing up, but not Example Group. We also knew our solution needed to make the Example Group show for all users, not just for ourselves.</p>
+<h2 id="the-clue">The Clue</h2>
+<p>My coworker and I were furiously searching for solutions to the problem when I came across this comment on the wonderful Microsoft Tech Community (replying to BAT MAN, of all people):</p>
+<p><img src="https:/images/how-to-display-your-m365-group-in-outlook1.png" alt="Placeholder"></p>
+<p>So, we wondered to ourselves, how do you even figure out where a group was created from?</p>
+<p>Alas, we never figured out the answer to that particular question, but we decided that this Power Shell command was the solution to try to chase down, working under the assumption that this had been created in Teams.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>Power Shell can be overwhelming, and while I’m far from an expert, I wanted to walk you through all of the steps we took to get this mailbox to show. We have to start by opening Windows PowerShell as an administrator. We can do this by searching for “PowerShell”, right clicking on the icon, and clicking “Run as administrator”:</p>
+<p><img src="https:/images/how-to-display-your-m365-group-in-outlook2.png" alt="Placeholder"></p>
+<p>There are more detailed instructions located here, but I’ll walk you through the basics. One prerequisite to running this code started throwing error messages in our case was that we hadn’t ensured that PowerShell was configured to run scripts, which is isn’t unless you manually tell it to. The following code makes sure that every script you run has a valid certificate:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Set-ExecutionPolicy RemoteSigned
+</span></span></code></pre></div><p>Next, you need to install the Exchange Online (EXO) PowerShell module using this code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Install-Module -Name ExchangeOnlineManagement
+</span></span></code></pre></div><p>Once you’ve accepted the license agreement by typing “y”, it is time to connect to the EXO module:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Import-Module ExchangeOnlineManagement
+</span></span></code></pre></div><p>Now your next steps will depend on whether or not Multi-Factor Authentication (MFA) is turned in for your organization. More detailed instructions can be found here, but if you have MFA turned on, you will have to use more detailed syntax to connect to EXO. Examples of this syntax for different types of organizations can be found here.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Connect-ExchangeOnline -UserPrincipalName &lt;<span style="color:#ff79c6">UPN</span>&gt; [-ExchangeEnvironmentName &lt;<span style="color:#ff79c6">Value</span>&gt;] [-DelegatedOrganization &lt;<span style="color:#ff79c6">String</span>&gt;] [-PSSessionOption $ProxyOptions]
+</span></span></code></pre></div><p>I would recommend putting this text in an editor like Notepad so that you can edit in your own information into the code before pasting it into PowerShell.</p>
+<ul>
+<li>UserPrincipalName is the full email address you are using to connect to the EXO environment, so you’d place that where it says <UPN> in the code.</li>
+<li>ExchangeEnvironmentName is optional, so you can delete that bracketed section entirely. It would be used if you aren’t in a Microsoft 365 environment.</li>
+<li>DelegatedOrganization is also optional, so you can delete that bracketed section as well. You would use this if you were a Microsoft Partner managing a customer’s separate tenant, so that URL would go here.</li>
+<li>PSSessionOption is, again, optional, so you know what to do by now. This would be used if you were behind a proxy server (more info here).</li>
+</ul>
+<p>So for most of you with MFA, all you will type in will actually look like, with your own email address inserted instead:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Connect-ExchangeOnline -UserPrincipalName user@contoso.com
+</span></span></code></pre></div><p>If you DON’T use MFA, follow the steps starting here. Run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$UserCredential = Get-Credential
+</span></span></code></pre></div><p>Here you are creating a variable that will store your username and password. It will prompt you to enter them when you run this, so do that before proceeding. Then, for reference, this is the full code, but see the MFA example for which bracketed parts you actually need to include.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Connect-ExchangeOnline [-Credential $UserCredential] [-ShowBanner:$false] [-ExchangeEnvironmentName ] [-DelegatedOrganization ] [-PSSessionOption $ProxyOptions]
+</span></span></code></pre></div><p>So as long as you are in a regular Microsoft 365 organization, not connecting for a Microsoft partner client, and not running a proxy, all you have to run is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Connect-ExchangeOnline -Credential $UserCredential
+</span></span></code></pre></div><p>As long as you didn’t get any errors, you are now successfully connected!</p>
+<p>Now that we are connected to the correct EXO environment, we are going to use a cmdlet (a piece of code in PowerShell) to make it so our group is no longer hidden from the Exchange Global Address List. Complete details of the cmdlet we are using are here, but I’ll provide the main part you need to know.</p>
+<p>Set-UnifedGroup has a parameter called -HiddenFromAddressListsEnabled, and you can either set it to $true or $false. By default, this is set to false (meaning the group is visible), but as mentioned, that isn’t the case when the group is created from Teams. For the record, if this was set to true, the group can get messages, but you can’t search for the group in Outlook or find it using the Discover option. Per Microsoft, “For users that are members of the Microsoft 365 Group, the group will still appear in the navigation pane in Outlook and Outlook on the web if HiddenFromExchangeClientsEnabled property is NOT enabled.” (source)</p>
+<p>So what we need to do is change this parameter to $false. To do that, we need to identify which group we are talking about, call the parameter in question, and change that value to $false. This is the code you will need, though I again recommend pasting it in Notepad first so you can add in your own group name inside of the quotation marks:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Set-UnifiedGroup -Identity &#34;Company Group&#34; -HiddenFromExchangeClientsEnabled: $false
+</span></span></code></pre></div><p>If it works and switches the value of that parameter successfully, the command line prompt will just come back up ready for you to enter another piece of code. If this wasn’t your problem and HiddenFromExchangeClientsEnabled was already set to false, you will get a yellow warning that reads something like: “WARNING: The command completed successfully but no settings of ‘MyListTest_e868c169-f00a-49fb-91bb-f067923eaea5’ have been modified.”</p>
+<p>Luckily for our client, no errors or warnings appeared. Instead, the missing group appeared in Outlook for the client to use normally, and all it took was a few cmdlets!</p>
+
+  </article>
+<div class="px-2 mb-2">
+  
+  <script src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</div>
+<div class="bg-pink-100 dark:bg-gray-900">
+  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Follow me</div>
+      <p class="opacity-60">Follow along for Power Platform, M365, and cat goodness</p>
+    </div>
+
+    <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
+      
+
+      
+      <li>
+        <a
+          href="https://twitter.com/LShelton_Tech"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a
+          href="https://linkedin.com/in/lindsaytshelton"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    </ul>
+  </div>
+</div>
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    Copyright © 2023 - Lindsay Shelton · All rights reserved
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https:/js/scripts.min.js"></script>
+
+
+
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
+</html>
