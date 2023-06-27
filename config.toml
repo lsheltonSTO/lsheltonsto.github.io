@@ -4,6 +4,7 @@ title = "Lindsay T. Shelton"
 theme = "blist"
 canonifyurls = true
 builddrafts = true 
+googleAnalytics = 'G-CN3PDT3T20'
 
 DefaultContentLanguage = "en"
 DefaultContentLanguageInSubdir = true
