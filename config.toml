@@ -117,6 +117,9 @@ DefaultContentLanguageInSubdir = true
   [[params.homepage.social.icons]]
     website = "linkedin"
     url = "https://linkedin.com/in/lindsaytshelton"
+  [[params.homepage.social.icons]]
+    website = "buymeacoffee"
+    url = "https://bmc.link/lindsaytshelton"
 
 
 [[menu.main]]
