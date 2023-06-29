@@ -17,4 +17,6 @@ I holds a BS in Secondary English Education from the University of Kansas and an
 
 In her spare time, I enjoy spending time with her two kittens Charlie and Trixie, and marathoning a wide variety of television shows.  Reach out with questions, comments, or thoughts about the latest Bravo reality shows.
 
+I do this for free because I enjoy doing it, but if I've helped you solve a problem and you feel so inclined, <a href="https://www.buymeacoffee.com/lindsaytshelton">buy me a Diet Coke</a> to keep my habit going and help me keep churning out more blogs!
+
 ![Placeholder](/images/mvp.jpg)
