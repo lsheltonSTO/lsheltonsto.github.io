@@ -5,7 +5,7 @@ draft: false
 author: "Lindsay Shelton"
 tags: ["personal", "power automate", "power apps", "podcast"]
 thumbnail: /images/mvp-show.jpg
-hidePageThumbnail: false
+hidePageThumbnail: true
 toc: false
 
 ---
