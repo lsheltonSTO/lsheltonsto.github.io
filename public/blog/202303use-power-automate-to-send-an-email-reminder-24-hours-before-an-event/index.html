@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="https:/images/LTS.png">
+
+  <title>
+  Use Power Automate to Send an Email Reminder 24 Hours Before an Event - Lindsay T. Shelton
+  </title>
+  <meta name="description" content="I couldn’t believe this wasn’t a template already when I searched, so I figured – blog post it is! Two in a month, I did it again!
+The Use Case This one is pretty simple. A user reached out and said she had a idea for how to use Power Automate, but she wasn’t sure how to make it happen. This immediately spikes my adrenaline, and I start searching triggers and actions right away." />
+  <meta name="author" content="Lindsay Shelton" />
+  <meta name="generator" content="Hugo 0.111.3"><link
+    rel="stylesheet"
+    href="https:/css/styles.min.c0846aac9db6c87efe354bad93a5e4432ef35cc12598aeed07df50323381cc06.css"
+    integrity="sha256-wIRqrJ22yH7+NUutk6XkQy7zXMElmK7tB99QMjOBzAY="
+  />
+  
+  
+
+  <meta property="og:title" content="Use Power Automate to Send an Email Reminder 24 Hours Before an Event" />
+<meta property="og:description" content="I couldn’t believe this wasn’t a template already when I searched, so I figured – blog post it is! Two in a month, I did it again!
+The Use Case This one is pretty simple. A user reached out and said she had a idea for how to use Power Automate, but she wasn’t sure how to make it happen. This immediately spikes my adrenaline, and I start searching triggers and actions right away." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https:/blog/202303use-power-automate-to-send-an-email-reminder-24-hours-before-an-event/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-03-27T14:49:05-05:00" />
+<meta property="article:modified_time" content="2023-03-27T14:49:05-05:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Use Power Automate to Send an Email Reminder 24 Hours Before an Event"/>
+<meta name="twitter:description" content="I couldn’t believe this wasn’t a template already when I searched, so I figured – blog post it is! Two in a month, I did it again!
+The Use Case This one is pretty simple. A user reached out and said she had a idea for how to use Power Automate, but she wasn’t sure how to make it happen. This immediately spikes my adrenaline, and I start searching triggers and actions right away."/>
+
+  <meta itemprop="name" content="Use Power Automate to Send an Email Reminder 24 Hours Before an Event">
+<meta itemprop="description" content="I couldn’t believe this wasn’t a template already when I searched, so I figured – blog post it is! Two in a month, I did it again!
+The Use Case This one is pretty simple. A user reached out and said she had a idea for how to use Power Automate, but she wasn’t sure how to make it happen. This immediately spikes my adrenaline, and I start searching triggers and actions right away."><meta itemprop="datePublished" content="2023-03-27T14:49:05-05:00" />
+<meta itemprop="dateModified" content="2023-03-27T14:49:05-05:00" />
+<meta itemprop="wordCount" content="522">
+<meta itemprop="keywords" content="onenote,power automate," />
+
+  
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="https:/" class="capitalize font-extrabold text-2xl">
+    
+    <img src="https:/images/LTS2.png" alt="Lindsay T. Shelton" class="h-8 max-w-full" />
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
+
+    
+    <li><a href="https:/blog">Blog</a></li>
+    
+    <li><a href="https:/page/about/">About</a></li>
+    
+    <li><a href="https:/tags">Tags</a></li>
+    
+
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main class="flex-1">
+  
+  
+
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">Use Power Automate to Send an Email Reminder 24 Hours Before an Event</h1>
+    
+    <h5 class="text-sm flex items-center flex-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      Posted on 
+  
+    March 27, 2023
+  
+
+
+      
+        &nbsp;&bull;&nbsp;
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      3&nbsp;minutes
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      522&nbsp;words
+      
+    </h5>
+    
+
+    <details id="TableOfContents" class="px-4 mt-4 bg-gray-100 dark:bg-gray-700 rounded toc">
+    <summary class="flex items-center font-bold py-2 px-4 cursor-pointer justify-between select-none text-black dark:text-white">
+      <span>Table of contents</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <polyline points="6 9 12 15 18 9"></polyline>
+     </svg>
+    </summary>
+
+    <ul class="mt-2 pb-4">
+        
+
+        
+        <li>
+        <a href="#the-use-case">The Use Case</a>
+        
+
+        
+        </li><li>
+        <a href="#the-flow">The Flow</a>
+        </li></ul>
+  </details>
+
+    <p><img src="https:/images/use-power-automate-to-send-an-email-reminder-24-hours-before-an-event1.png" alt="Placeholder"></p>
+<p>I couldn’t believe this wasn’t a template already when I searched, so I figured – blog post it is! Two in a month, I did it again!</p>
+<h2 id="the-use-case">The Use Case</h2>
+<p>This one is pretty simple. A user reached out and said she had a idea for how to use Power Automate, but she wasn’t sure how to make it happen. This immediately spikes my adrenaline, and I start searching triggers and actions right away.</p>
+<p>Basically, when she had a group event coming up, she was typically making herself a calendar event 24 hours in advance to remind people, but wouldn’t it be nice if Power Automate could just remind people for her, like EventBrite does? Yes, yes that would be nice, I said, and away we went!</p>
+<h2 id="the-flow">The Flow</h2>
+<p>This might actually be a short one for me. The flow is only 4 blocks long, so how long could I possibly ramble for?</p>
+<p><img src="https:/images/use-power-automate-to-send-an-email-reminder-24-hours-before-an-event.gif" alt="Placeholder"></p>
+<p>Anyway, the tricky part for me was (I was wrong, in hindsight) figuring out the trigger. Because this was a group event, we were going to go with a different trigger, but the calendar ID on an Office 365 Outlook trigger that did something very similar was giving me headaches, so we went with the O365 Groups trigger “When there is a new event”. All you need for that is the group ID, which you can fetch from Azure AD.</p>
+<p>Once the trigger was in place, I came across my next hurdle – this trigger returns an improperly formatted date/time for the end action I wanted – send an email (V2).</p>
+<p><img src="https:/images/use-power-automate-to-send-an-email-reminder-24-hours-before-an-event2.png" alt="Placeholder"></p>
+<p>So, I actually used the formula wizard to help me with getting a formula that worked for me, and I put it in a compose block for easier use in my next block.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>formatDateTime(parseDateTime(triggerOutputs()?[&#39;body/start/dateTime&#39;]), &#39;yyyy&#39;&#39;-&#39;&#39;MM&#39;&#39;-&#39;&#39;dd&#39;&#39;T&#39;&#39;HH&#39;&#39;:&#39;&#39;mm&#39;&#39;:&#39;&#39;ss&#39;&#39;Z&#39;&#39;&#39;, &#39;en-US&#39;)
+</span></span></code></pre></div><p>Is all of that really necessary? Heck if I know, but it works and that’s what matters!</p>
+<p>So, once I have my properly formatted (it looked fine before, who knows) date and time, it’s time to bring out the Delay Until block. Here I needed to use another formula, so it was easier for me to be able to refer to already formatted date and time.</p>
+<p>For this use case, we want it to email 24 hours in advance, so I used addDays -1. Feel free to adapt to the time period you want, just with playing with that integer of -1. No idea if partials work (.5, etc).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>formatDateTime(addDays(outputs(&#39;Compose_formatted_datetime&#39;),-1),&#39;yyyy-MM-ddTHH:mm:ssZ&#39;,&#39;en-US&#39;)
+</span></span></code></pre></div><p>I renamed my Compose block to “Compose formatted datetime” if you are like me and hate having to change things to work for your own formulas.</p>
+<p>I was getting lots of wrong results before I made the hours capitalized and added the locale at the end (have I mentioned on this blog lately how much I hate working with calendaring?), but finally we got a reliable result.</p>
+<p>Last block was whatever you want to happen at the 24 hour mark! In my use case, it was Send an email (v2).</p>
+<p>Final flow looks like this:</p>
+<p><img src="https:/images/use-power-automate-to-send-an-email-reminder-24-hours-before-an-event3.png" alt="Placeholder"></p>
+<p><img src="https:/images/use-power-automate-to-send-an-email-reminder-24-hours-before-an-event4.jpg" alt="Placeholder"></p>
+<p>It’s short for me, okay? I’ll go pet you now, Charlie (yes that’s one of my kittens).</p>
+
+  </article>
+<div class="px-2 mb-2">
+  
+  <script src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</div>
+<div class="bg-pink-100 dark:bg-gray-900">
+  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Follow me</div>
+      <p class="opacity-60">Follow along for Power Platform, M365, and cat goodness</p>
+    </div>
+
+    <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
+      
+
+      
+      <li>
+        <a
+          href="https://twitter.com/LShelton_Tech"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a
+          href="https://linkedin.com/in/lindsaytshelton"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    </ul>
+  </div>
+</div>
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    Copyright © 2023 - Lindsay Shelton · All rights reserved
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https:/js/scripts.min.js"></script>
+
+
+
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
+</html>

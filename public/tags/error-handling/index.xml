@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>error handling on Lindsay T. Shelton</title>
+    <link>https:/tags/error-handling/</link>
+    <description>Recent content in error handling on Lindsay T. Shelton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 26 Jan 2023 14:49:05 -0500</lastBuildDate><atom:link href="https:/tags/error-handling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Frankenstein’s Monster Error Handling for Power Automate Cloud Flows</title>
+      <link>https:/blog/202301frankensteins-monster-error-handling-for-power-automate-cloud-flows/</link>
+      <pubDate>Thu, 26 Jan 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202301frankensteins-monster-error-handling-for-power-automate-cloud-flows/</guid>
+      <description>Be warned now – the content in this post is not 100% from my own brain and genius. In fact, it is cobbled together from three different geniuses who were kind enough to post their own methods for error handling in Power Automate over the years. I’ve judiciously bookmarked those posts, just waiting for when I had time and motivation to tackle error handling in my own flows, and today was that day.</description>
+    </item>
+    
+  </channel>
+</rss>

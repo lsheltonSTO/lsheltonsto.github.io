@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>connections on Lindsay T. Shelton</title>
+    <link>https:/tags/connections/</link>
+    <description>Recent content in connections on Lindsay T. Shelton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 23 Feb 2023 14:49:05 -0500</lastBuildDate><atom:link href="https:/tags/connections/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Connections in Power Automate (and How to Take Control of Them)</title>
+      <link>https:/blog/202302connections-in-power-automate/</link>
+      <pubDate>Thu, 23 Feb 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202302connections-in-power-automate/</guid>
+      <description>Do you have a flow running, proud as can be, except… the emails it sends out says they are from you? Did you get help on a flow and now it says that the SharePoint library is being updated by your coworker?
+All of this is due to ~connections~ in Power Automate. I’m going to attempt to quickly introduce them, go over how to change and then remove them, and explain a best practice with connections.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="https:/images/LTS.png">
+
+  <title>
+  Frankenstein’s Monster Error Handling for Power Automate Cloud Flows - Lindsay T. Shelton
+  </title>
+  <meta name="description" content="Be warned now – the content in this post is not 100% from my own brain and genius. In fact, it is cobbled together from three different geniuses who were kind enough to post their own methods for error handling in Power Automate over the years. I’ve judiciously bookmarked those posts, just waiting for when I had time and motivation to tackle error handling in my own flows, and today was that day." />
+  <meta name="author" content="Lindsay Shelton" />
+  <meta name="generator" content="Hugo 0.111.3"><link
+    rel="stylesheet"
+    href="https:/css/styles.min.c0846aac9db6c87efe354bad93a5e4432ef35cc12598aeed07df50323381cc06.css"
+    integrity="sha256-wIRqrJ22yH7+NUutk6XkQy7zXMElmK7tB99QMjOBzAY="
+  />
+  
+  
+
+  <meta property="og:title" content="Frankenstein’s Monster Error Handling for Power Automate Cloud Flows" />
+<meta property="og:description" content="Be warned now – the content in this post is not 100% from my own brain and genius. In fact, it is cobbled together from three different geniuses who were kind enough to post their own methods for error handling in Power Automate over the years. I’ve judiciously bookmarked those posts, just waiting for when I had time and motivation to tackle error handling in my own flows, and today was that day." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https:/blog/202301frankensteins-monster-error-handling-for-power-automate-cloud-flows/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-01-26T14:49:05-05:00" />
+<meta property="article:modified_time" content="2023-01-26T14:49:05-05:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Frankenstein’s Monster Error Handling for Power Automate Cloud Flows"/>
+<meta name="twitter:description" content="Be warned now – the content in this post is not 100% from my own brain and genius. In fact, it is cobbled together from three different geniuses who were kind enough to post their own methods for error handling in Power Automate over the years. I’ve judiciously bookmarked those posts, just waiting for when I had time and motivation to tackle error handling in my own flows, and today was that day."/>
+
+  <meta itemprop="name" content="Frankenstein’s Monster Error Handling for Power Automate Cloud Flows">
+<meta itemprop="description" content="Be warned now – the content in this post is not 100% from my own brain and genius. In fact, it is cobbled together from three different geniuses who were kind enough to post their own methods for error handling in Power Automate over the years. I’ve judiciously bookmarked those posts, just waiting for when I had time and motivation to tackle error handling in my own flows, and today was that day."><meta itemprop="datePublished" content="2023-01-26T14:49:05-05:00" />
+<meta itemprop="dateModified" content="2023-01-26T14:49:05-05:00" />
+<meta itemprop="wordCount" content="1993">
+<meta itemprop="keywords" content="how to,error handling,power automate," />
+
+  
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="https:/" class="capitalize font-extrabold text-2xl">
+    
+    <img src="https:/images/LTS2.png" alt="Lindsay T. Shelton" class="h-8 max-w-full" />
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
+
+    
+    <li><a href="https:/blog">Blog</a></li>
+    
+    <li><a href="https:/page/about/">About</a></li>
+    
+    <li><a href="https:/tags">Tags</a></li>
+    
+
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main class="flex-1">
+  
+  
+
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">Frankenstein’s Monster Error Handling for Power Automate Cloud Flows</h1>
+    
+    <h5 class="text-sm flex items-center flex-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      Posted on 
+  
+    January 26, 2023
+  
+
+
+      
+        &nbsp;&bull;&nbsp;
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      10&nbsp;minutes
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      1993&nbsp;words
+      
+    </h5>
+    
+
+    <details id="TableOfContents" class="px-4 mt-4 bg-gray-100 dark:bg-gray-700 rounded toc">
+    <summary class="flex items-center font-bold py-2 px-4 cursor-pointer justify-between select-none text-black dark:text-white">
+      <span>Table of contents</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <polyline points="6 9 12 15 18 9"></polyline>
+     </svg>
+    </summary>
+
+    <ul class="mt-2 pb-4">
+        
+
+        
+        <li>
+        <a href="#the-setup">The Setup</a>
+        
+
+        
+        </li><li>
+        <a href="#the-basic-flow-structure">The Basic Flow Structure</a>
+        
+
+        
+        </li><li>
+        <a href="#the-error-handling">The Error Handling</a>
+        
+
+        
+        </li><li>
+        <a href="#in-closing">In Closing</a>
+        </li></ul>
+  </details>
+
+    <p>Be warned now – the content in this post is not 100% from my own brain and genius. In fact, it is cobbled together from three different geniuses who were kind enough to post their own methods for error handling in Power Automate over the years. I’ve judiciously bookmarked those posts, just waiting for when I had time and motivation to tackle error handling in my own flows, and today was that day.</p>
+<p>However, when it came time to actually implement one of the methods… it wasn’t quite doing it for me. Method one that I found influenced what I ended up with the most heavily, but it didn’t have my dream error adaptive card, so I checked out the other two options I had bookmarked. Method two actually posted the error message, which is what I wanted, but I couldn’t actually get it to work for me. Method three showed me how to pull the workflow URL so that I could link it from my adaptive card, making it easier at least to get to the error message.</p>
+<p>So, I couldn’t have created my own version without the help from the three blog posts mentioned, but I thought others might find value in an updated, Frankenstein-ed together version of how I’m going to try handling errors going forward.</p>
+<h2 id="the-setup">The Setup</h2>
+<p>I saw options in my research that called for the error notifications to come in a variety of ways, but none of them were really what I was looking for.</p>
+<ul>
+<li>Post the error to a SharePoint list, but then that would involve deciding where the list should go, setting up permissions, setting up notifications, setting up the list, etc. Seemed like more trouble than it was worth when I can also look at the flow runs in Power Automate itself, and I didn’t really have a need to look at errors past 28 days.</li>
+<li>Email the error to someone or a group of people. This definitely could have worked, but while I’m the primary Power Automate resource at my organization, this becomes problematic when trying to decide who else gets on the email. Then that person or persons are getting error emails when they really only need them when I’m out. Hard-coding email addresses in a bunch of flows also complicates things if I were to leave.</li>
+<li>Teams messages. This was tempting, but ultimately had the same drawbacks as the email messages.</li>
+</ul>
+<p>So, I decided to go with a dedicated Teams channel that the flows will post adaptive cards into. That way, whoever feels the need to know about flow errors can turn on notifications on the channel quickly, and whoever doesn’t want to know can just hide the channel. Plus, adaptive cards are still new to me and I wanted to play with them some more.</p>
+<h2 id="the-basic-flow-structure">The Basic Flow Structure</h2>
+<p>I may regret this when it comes to some of my larger flows, but I decided I want to try <a href="https://normyoung.ca/2022/12/20/error-handling-in-power-automate-using-adaptive-cards-for-microsoft-teams/">Norm Young</a>‘s Scope pattern of Try, Catch, and Finally that he blogged about. It just looks cleaner to me, and it tells me very quickly which flows have been configured for error handling in this method and which ones haven’t.</p>
+<p><img src="https:/images/frankensteins-monster-error-handling-for-power-automate-cloud-flows1.png" alt="Placeholder"></p>
+<p>This is my flow that I’m adding error handling to today. It’s very simple – a trigger and one main action (told you adaptive cards were still new and exciting to me – this was my first use of them!), with a Compose action thrown in to help me determine which fields are sending back what that I will probably get rid of at some point.</p>
+<p>So, I went ahead and added three Scope blocks and renamed them to Scope – Try, Scope – Catch, and Scope – Finally. I also added notes explaining what each block does.</p>
+<p><img src="https:/images/frankensteins-monster-error-handling-for-power-automate-cloud-flows2.png" alt="Placeholder"></p>
+<p>Now, I’m going to move my Compose and Post adaptive card in a chat or channel actions inside of my Scope – Try block.</p>
+<p>I’m also going to add a block to Initialize variable varDebug and make it a string variable (anything with varDebug is also courtesy of Norm Young!). For the Value, you will want to set it to “List of action names and statuses” with a few returns after it, like in the image below:</p>
+<p><img src="https:/images/frankensteins-monster-error-handling-for-power-automate-cloud-flows3.png" alt="Placeholder"></p>
+<p>Now, we aren’t going to do anything else to the Scope – Try block, but we are going to do some configurations to the Scope – Catch and Scope – Finally blocks. Click the three dots on the right of the Scope – Catch block and click “Configure run after”.</p>
+<p><img src="https:/images/frankensteins-monster-error-handling-for-power-automate-cloud-flows4.png" alt="Placeholder"></p>
+<p>UNCHECK the “is successful” box and check “has failed”, “is skipped”, and “has timed out”. Yours should look like the screenshot below:</p>
+<p><img src="https:/images/frankensteins-monster-error-handling-for-power-automate-cloud-flows5.png" alt="Placeholder"></p>
+<p>You are going to click Done, and then do the same thing with the Scope – Finally block. Instead of unchecking “is successful” there though, you will just check all four boxes. We aren’t going to use that box in this blog, but it’s just good practice to get it set up as if we were from the start.</p>
+<h2 id="the-error-handling">The Error Handling</h2>
+<p>Now it’s time to start setting up the actual error handling in the Scope – Catch block. Everything else we do will be in that block.</p>
+<p>First, you are going to add an Apply to Each block. Where it wants you to input “Select an output from previous steps”, we are going to refer specifically to the output of the Scope – Try block. So, click in that text box, change from the Dynamic content editor on the right to the Expression editor, and paste in the following expression:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>result(&#39;Scope_-_Try&#39;)
+</span></span></code></pre></div><p>Note that this expression relies on how we named that Scope block – “Scope – Try”. If you name it differently, you will have to edit what is in the quotation marks in your expression to match.</p>
+<p>Now, the action we are going to add inside the Apply to each control loop is Append to string variable. You will select the “varDebug” variable as the “Name”. For the “Value”, we are going to have to put in two expressions mixed in with regular text. This is what we are going for:</p>
+<p>Action Name: @{items(‘Apply_to_each_varDebug’)?[‘name’]}</p>
+<p>Action Status: @{items(‘Apply_to_each_varDebug’)?[‘status’]}</p>
+<p>This is honestly not my preferred way to do this. Basically, it will list each of our actions and whether or not they succeeded or failed which is fine. I would prefer to just get the error message itself, but one method was working for me and one wasn’t, so there is an obvious winner (the one that works!). Feel free to customize as you prefer, just like I ended up doing with the overall solution.</p>
+<p>Your Scope – Catch block should now look something like this:</p>
+<p><img src="https:/images/frankensteins-monster-error-handling-for-power-automate-cloud-flows6.png" alt="Placeholder"></p>
+<p>Don’t worry about the icons on the “name” and “status” expressions. They will look different for each person, I believe. Mine are the icons from my trigger, even though I’m not invoking my trigger here, so don’t ask me for the logic behind that.</p>
+<p>You don’t have to do the next steps, but this was one of the smooshed-together things I wanted for my solution. I wanted a link to my flow run, so I created a series of Compose actions (which I then renamed and added some wording too in an effort to reduce confusion).</p>
+<p>Note that this needs to happen OUTSIDE of the Apply to each action but INSIDE of the Scope – Catch block.</p>
+<p>First Compose action is simply to store my varDebug variable, now nicely appended to with my list of actions and their status. So, for “Inputs”, just put the “varDebug” variable.</p>
+<p>The second Compose action gets all of the workflow details. We are going to refer to this Compose action repeatedly in the third Compose action, so it’s going to be a lot easier on you if you name it like I have it named (but you do you!) For the “Inputs” value, go back to the Expression editor and put in:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>workflow()
+</span></span></code></pre></div><p>Don’t forget to click Ok to input your new expression.</p>
+<p>The third Compose action is where we get fancy (and where we may have to update this blog as Microsoft changes these URLs, as I had to do when working from Matthew Devaney’s blog).</p>
+<p>The code your are seeking is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>https://make.powerautomate.com/environments/@{outputs(&#39;Compose_-_Get_Workflow_Details&#39;)?[&#39;tags&#39;]?[&#39;environmentName&#39;]}/flows/@{outputs(&#39;Compose_-_Get_Workflow_Details&#39;)?[&#39;name&#39;]}/runs/@{outputs(&#39;Compose_-_Get_Workflow_Details&#39;)?[&#39;run&#39;]?[&#39;name&#39;]}
+</span></span></code></pre></div><p>Like I said, if you name your Compose action differently, aka not “Compose – Get Workflow Details”, you just have to make adjustments to each time it appears in the formula.</p>
+<p>All together, this is what your three Compose actions should look like/how they should be named:</p>
+<p><img src="https:/images/frankensteins-monster-error-handling-for-power-automate-cloud-flows7.png" alt="Placeholder"></p>
+<p>The last block we are going to put in is the most complicated (at least at first glance), but you can also choose your own adventure here. For me, the last action I’m putting in is the Post adaptive card in a chat or channel block. Configuring the card is the harder part. Configuring where to put it is the easier part, as you can pick from a dropdown whether you want it to post as you, a flow bot, and whether you want it in a chat, a channel, or a group chat.</p>
+<p>For the Adaptive Card JSON, you will want to customize that to your tastes. Here’s mine for a basis to work off of:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    &#34;$schema&#34;: &#34;http://adaptivecards.io/schemas/adaptive-card.json&#34;,
+</span></span><span style="display:flex;"><span>    &#34;type&#34;: &#34;AdaptiveCard&#34;,
+</span></span><span style="display:flex;"><span>    &#34;version&#34;: &#34;1.4&#34;,
+</span></span><span style="display:flex;"><span>    &#34;body&#34;: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            &#34;type&#34;: &#34;TextBlock&#34;,
+</span></span><span style="display:flex;"><span>            &#34;text&#34;: &#34;Power Automate Error&#34;,
+</span></span><span style="display:flex;"><span>            &#34;wrap&#34;: true,
+</span></span><span style="display:flex;"><span>            &#34;isSubtle&#34;: true,
+</span></span><span style="display:flex;"><span>            &#34;maxLines&#34;: 0,
+</span></span><span style="display:flex;"><span>            &#34;weight&#34;: &#34;Bolder&#34;,
+</span></span><span style="display:flex;"><span>            &#34;color&#34;: &#34;Attention&#34;
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            &#34;type&#34;: &#34;ColumnSet&#34;,
+</span></span><span style="display:flex;"><span>            &#34;columns&#34;: [
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    &#34;type&#34;: &#34;Column&#34;,
+</span></span><span style="display:flex;"><span>                    &#34;width&#34;: &#34;auto&#34;,
+</span></span><span style="display:flex;"><span>                    &#34;items&#34;: [
+</span></span><span style="display:flex;"><span>                        {
+</span></span><span style="display:flex;"><span>                            &#34;type&#34;: &#34;Image&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;size&#34;: &#34;Small&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;url&#34;: &#34;http://store-images.s-microsoft.com/image/apps.24143.13592668300764735.55b49f05-a58f-437f-95f4-f51ea7542976.f30e5790-6318-41e4-86ef-6b813b3b2a17&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;horizontalAlignment&#34;: &#34;Center&#34;
+</span></span><span style="display:flex;"><span>                        }
+</span></span><span style="display:flex;"><span>                    ]
+</span></span><span style="display:flex;"><span>                },
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    &#34;type&#34;: &#34;Column&#34;,
+</span></span><span style="display:flex;"><span>                    &#34;width&#34;: &#34;stretch&#34;,
+</span></span><span style="display:flex;"><span>                    &#34;items&#34;: [
+</span></span><span style="display:flex;"><span>                        {
+</span></span><span style="display:flex;"><span>                            &#34;type&#34;: &#34;TextBlock&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;text&#34;: &#34;@{workflow().tags.flowDisplayName}&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;weight&#34;: &#34;Bolder&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;size&#34;: &#34;ExtraLarge&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;spacing&#34;: &#34;None&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;wrap&#34;: false
+</span></span><span style="display:flex;"><span>                        }
+</span></span><span style="display:flex;"><span>                    ]
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            &#34;type&#34;: &#34;TextBlock&#34;,
+</span></span><span style="display:flex;"><span>            &#34;wrap&#34;: true,
+</span></span><span style="display:flex;"><span>            &#34;text&#34;: &#34;Flow error - please investigate.&#34;,
+</span></span><span style="display:flex;"><span>            &#34;horizontalAlignment&#34;: &#34;Left&#34;,
+</span></span><span style="display:flex;"><span>            &#34;size&#34;: &#34;Default&#34;,
+</span></span><span style="display:flex;"><span>            &#34;weight&#34;: &#34;Bolder&#34;,
+</span></span><span style="display:flex;"><span>            &#34;color&#34;: &#34;Attention&#34;
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            &#34;type&#34;: &#34;ColumnSet&#34;,
+</span></span><span style="display:flex;"><span>            &#34;columns&#34;: [
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    &#34;type&#34;: &#34;Column&#34;,
+</span></span><span style="display:flex;"><span>                    &#34;width&#34;: &#34;stretch&#34;,
+</span></span><span style="display:flex;"><span>                    &#34;items&#34;: [
+</span></span><span style="display:flex;"><span>                        {
+</span></span><span style="display:flex;"><span>                            &#34;type&#34;: &#34;TextBlock&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;text&#34;: &#34;@{outputs(&#39;Compose_-_varDebug&#39;)}&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;size&#34;: &#34;Small&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;weight&#34;: &#34;Default&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;spacing&#34;: &#34;Small&#34;,
+</span></span><span style="display:flex;"><span>                            &#34;separator&#34;: true,
+</span></span><span style="display:flex;"><span>                            &#34;wrap&#34;: true
+</span></span><span style="display:flex;"><span>                        }
+</span></span><span style="display:flex;"><span>                    ]
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            &#34;type&#34;: &#34;ActionSet&#34;,
+</span></span><span style="display:flex;"><span>            &#34;actions&#34;: [
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    &#34;type&#34;: &#34;Action.OpenUrl&#34;,
+</span></span><span style="display:flex;"><span>                    &#34;title&#34;: &#34;Link to Failed Flow Run&#34;,
+</span></span><span style="display:flex;"><span>                    &#34;url&#34;: &#34;@{outputs(&#39;Compose_-_Flow_Run_URL&#39;)}&#34;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>What I recommend doing if you want to customize this is, instead of just eyeballing it and testing over and over, copy/paste this into the Card Payload Editor section of the Adaptive Card Designer tool: <a href="https://adaptivecards.io/designer/" target="_blank" rel="noopener">https://adaptivecards.io/designer/</a>
+. It will look kind of funny because you are referencing variables that won’t show properly, but you can at least change the formatting and see where the variables are going to go this way.</p>
+<p>Here’s what mine looks like, for an example:</p>
+<p><img src="https:/images/frankensteins-monster-error-handling-for-power-automate-cloud-flows8.png" alt="Placeholder"></p>
+<p>Once you have tweaked the JSON to your liking, all that’s left is to save your flow and test it!</p>
+<p>Here’s what my final adaptive card looks like in our designated channel:</p>
+<p><img src="https:/images/frankensteins-monster-error-handling-for-power-automate-cloud-flows9.png" alt="Placeholder"></p>
+<p>The hardest part may be finding a flow with an error to test. Luckily for me, one of my newer flows had an adaptive card get cranky with quotation marks in a title (I can’t believe adaptive cards betrayed me in this way so early in our relationship!), so I was set for testing.</p>
+<h2 id="in-closing">In Closing</h2>
+<p>I want to again give a huge shoutout to the blogs that were the original hosts for my Frankenstein’s Monster of Error Handling:</p>
+<ul>
+<li><a href="https://normyoung.ca/2022/12/20/error-handling-in-power-automate-using-adaptive-cards-for-microsoft-teams/">Norm Young – Error handling in Power Automate using Adaptive Cards for Microsoft Teams</a> – by far my biggest source</li>
+<li><a href="https://www.about365.nl/2020/12/28/advanced-error-handling-in-power-automate/">Rik de Koning – Advanced error handling in Power Automate</a> – some great tips, and while I couldn’t get the message working for me, maybe you will have more luck</li>
+<li><a href="https://www.matthewdevaney.com/3-power-automate-error-handling-patterns-you-must-know/">Matthew Devaney – 3 Power Automate Error-Handling Patterns You Must Know</a> – Matthew also uses a shorter version of Try, Catch, Finally, but I mostly utilized his method for getting the flow run URL</li>
+</ul>
+<p>I’m forever thankful for the people who post blogs with their solutions, and I can only hope that my version of a solution is a helpful one-stop source for someone else!</p>
+
+  </article>
+<div class="px-2 mb-2">
+  
+  <script src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</div>
+<div class="bg-pink-100 dark:bg-gray-900">
+  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Follow me</div>
+      <p class="opacity-60">Follow along for Power Platform, M365, and cat goodness</p>
+    </div>
+
+    <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
+      
+
+      
+      <li>
+        <a
+          href="https://twitter.com/LShelton_Tech"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a
+          href="https://linkedin.com/in/lindsaytshelton"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    </ul>
+  </div>
+</div>
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    Copyright © 2023 - Lindsay Shelton · All rights reserved
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https:/js/scripts.min.js"></script>
+
+
+
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
+</html>

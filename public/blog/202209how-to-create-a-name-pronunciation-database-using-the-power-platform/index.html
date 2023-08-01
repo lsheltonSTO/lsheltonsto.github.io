@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="https:/images/LTS.png">
+
+  <title>
+  How To: Create a Name Pronunciation Database Using the Power Platform (now with samples links!) - Lindsay T. Shelton
+  </title>
+  <meta name="description" content="The Problem and Requirements I work at a medical research institute that is incredibly diverse. We have scientists from all over the globe, which can lead to some frustration on everyone’s part when it comes to the diverse names that these employees have. To be clear – it’s not just an issue of names that aren’t “American” causing “problems” – we have so many immigrant employees that even names that may seem straightforward, like “Lindsay”, can be confusing." />
+  <meta name="author" content="Lindsay Shelton" />
+  <meta name="generator" content="Hugo 0.111.3"><link
+    rel="stylesheet"
+    href="https:/css/styles.min.c0846aac9db6c87efe354bad93a5e4432ef35cc12598aeed07df50323381cc06.css"
+    integrity="sha256-wIRqrJ22yH7+NUutk6XkQy7zXMElmK7tB99QMjOBzAY="
+  />
+  
+  
+
+  <meta property="og:title" content="How To: Create a Name Pronunciation Database Using the Power Platform (now with samples links!)" />
+<meta property="og:description" content="The Problem and Requirements I work at a medical research institute that is incredibly diverse. We have scientists from all over the globe, which can lead to some frustration on everyone’s part when it comes to the diverse names that these employees have. To be clear – it’s not just an issue of names that aren’t “American” causing “problems” – we have so many immigrant employees that even names that may seem straightforward, like “Lindsay”, can be confusing." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https:/blog/202209how-to-create-a-name-pronunciation-database-using-the-power-platform/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-09-30T14:49:05-05:00" />
+<meta property="article:modified_time" content="2022-09-30T14:49:05-05:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How To: Create a Name Pronunciation Database Using the Power Platform (now with samples links!)"/>
+<meta name="twitter:description" content="The Problem and Requirements I work at a medical research institute that is incredibly diverse. We have scientists from all over the globe, which can lead to some frustration on everyone’s part when it comes to the diverse names that these employees have. To be clear – it’s not just an issue of names that aren’t “American” causing “problems” – we have so many immigrant employees that even names that may seem straightforward, like “Lindsay”, can be confusing."/>
+
+  <meta itemprop="name" content="How To: Create a Name Pronunciation Database Using the Power Platform (now with samples links!)">
+<meta itemprop="description" content="The Problem and Requirements I work at a medical research institute that is incredibly diverse. We have scientists from all over the globe, which can lead to some frustration on everyone’s part when it comes to the diverse names that these employees have. To be clear – it’s not just an issue of names that aren’t “American” causing “problems” – we have so many immigrant employees that even names that may seem straightforward, like “Lindsay”, can be confusing."><meta itemprop="datePublished" content="2022-09-30T14:49:05-05:00" />
+<meta itemprop="dateModified" content="2022-09-30T14:49:05-05:00" />
+<meta itemprop="wordCount" content="1457">
+<meta itemprop="keywords" content="how to,DEI,hackathon,power apps,power automate," />
+
+  
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen"><header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+  <a href="https:/" class="capitalize font-extrabold text-2xl">
+    
+    <img src="https:/images/LTS2.png" alt="Lindsay T. Shelton" class="h-8 max-w-full" />
+    
+  </a>
+  <button class="mobile-menu-button md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="8" x2="20" y2="8" />
+      <line x1="4" y1="16" x2="20" y2="16" />
+    </svg>
+  </button>
+  <ul class="mobile-menu absolute z-10 px-6 pb-6 md:p-0 top-full left-0 w-full md:w-auto md:relative hidden md:flex flex-col md:flex-row items-end md:items-center gap-4 lg:gap-6 bg-white dark:bg-gray-800">
+
+    
+    <li><a href="https:/blog">Blog</a></li>
+    
+    <li><a href="https:/page/about/">About</a></li>
+    
+    <li><a href="https:/tags">Tags</a></li>
+    
+
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main class="flex-1">
+  
+  
+
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">How To: Create a Name Pronunciation Database Using the Power Platform (now with samples links!)</h1>
+    
+    <h5 class="text-sm flex items-center flex-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      Posted on 
+  
+    September 30, 2022
+  
+
+
+      
+        &nbsp;&bull;&nbsp;
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      7&nbsp;minutes
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      1457&nbsp;words
+      
+    </h5>
+    
+
+    <details id="TableOfContents" class="px-4 mt-4 bg-gray-100 dark:bg-gray-700 rounded toc">
+    <summary class="flex items-center font-bold py-2 px-4 cursor-pointer justify-between select-none text-black dark:text-white">
+      <span>Table of contents</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <polyline points="6 9 12 15 18 9"></polyline>
+     </svg>
+    </summary>
+
+    <ul class="mt-2 pb-4">
+        
+
+        
+        <li>
+        <a href="#the-problem-and-requirements">The Problem and Requirements</a>
+        
+
+        
+        </li><li>
+        <a href="#the-solution">The Solution</a>
+        
+
+        
+        </li><li>
+        <a href="#the-power-app">The Power App</a>
+        
+
+        
+        </li><li>
+        <a href="#the-power-automate-flow">The Power Automate Flow</a>
+        
+
+        
+        </li><li>
+        <a href="#conclusions">Conclusions</a>
+        </li></ul>
+  </details>
+
+    <h2 id="the-problem-and-requirements">The Problem and Requirements</h2>
+<p>I work at a medical research institute that is incredibly diverse. We have scientists from all over the globe, which can lead to some frustration on everyone’s part when it comes to the diverse names that these employees have. To be clear – it’s not just an issue of names that aren’t “American” causing “problems” – we have so many immigrant employees that even names that may seem straightforward, like “Lindsay”, can be confusing. Heck, as a former teacher, I know there are plenty of names from non-immigrant students that I had to write out a pronunciation guide for and practice saying.</p>
+<p>For our annual Hackathon, one of our members (what we call our employees) suggested creating some sort of resource for hearing how other members say their names, like LinkedIn has. Having had to pronounce hundreds of unique names every year as a teacher, I jumped on this team as soon as I saw the idea posted.</p>
+<p>Our requirements, being a Hackathon, were pretty wide open. How could we build something, anything at all, that would allow someone to know how to say someone else’s name? We discussed a pronunciation guide, but does a pronunciation guide written for a native English speaker work for a native Arabic speaker? Automating pronunciation was also considered, but what about people who say their names differently than any sort of automation would predict? For example, some people will pronounce my name as “Lind-sAy”, when I just pronounce it “Lind-see” because it’s easier (but don’t you dare spell it wrong – it’s my mother’s maiden name, okay!)</p>
+<p>So, we wound up determining it would be ideal for each member to be able to record their own name pronunciation, so we could hear it exactly as they wanted us to say it. Along the way, keeping diversity, equity, and inclusion in mind as much as we could, it was also suggested that we could suggest people include their pronouns in their name pronunciation. By the way, saying “preferred pronouns” “suggests that any other pronouns used are acceptable” (thanks Steph Nowotarski!) – in case you weren’t aware!</p>
+<h2 id="the-solution">The Solution</h2>
+<p>We knew that a Power App alone wouldn’t be the best solution, partly because Power App adoption is relatively low at the institute (so far…) and partly because we wanted it to be as straightforward as possible to access the recordings of the names, which is the most important part.</p>
+<p>Our team decided that the best design for a solution would be a Power App that fed into a SharePoint Document Library, with a Power Automate flow fueling the population of the library. This way, we had a dedicated page in SharePoint, which we use heavily, that would allow the member to both record their name on the Power App and listen to the recordings in the Document Library.</p>
+<p><img src="https:/images/how-to-create-a-name-pronunciation-database-using-the-power-platform1.png" alt="Placeholder"></p>
+<p>The full SharePoint page is much prettier with a heading image and links to a Help document (thanks Caroline!), but this is the meat of it.</p>
+<p>The page itself is just a two column page with embedded web parts. On the left is the Power App I built, and on the right is a simple SharePoint Document Library. The member clicks the button (wish we could customize it, but couldn’t find a way to) to record their name and pronouns, and when they click Preview Audio, the audio file pops up for review before they click the neumorphic upload button (totally a stretch goal, but courtesy of the wonderful Kristine Kolodziejski here <a href="https://www.kristinekolodziejski.com/blog/building-beautiful-buttons-in-canvas-apps-part-1-neumorphic-buttons%29" target="_blank" rel="noopener">https://www.kristinekolodziejski.com/blog/building-beautiful-buttons-in-canvas-apps-part-1-neumorphic-buttons)</a>
+.</p>
+<h2 id="the-power-app">The Power App</h2>
+<p>I am far from a Power App expert and previously I’ve built a whole one Power App that is in production, but I like a challenge and I love Power Automate, so I went to the Google and found some amazing resources to help me build out what we wanted.</p>
+<p>It started with a Microphone control (Insert – Media – Microphone – see more here <a href="https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/control-microphone%29" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/control-microphone)</a>
+. All I did with this was change its color to fit our branding guidelines, add an accessibility label, and add a text box above it explaining what to do with it.</p>
+<p>For the next step, this was an invaluable resource: <a href="http://powerappsguide.com/blog/post/how-to-save-and-work-with-microphone-recordings" target="_blank" rel="noopener">http://powerappsguide.com/blog/post/how-to-save-and-work-with-microphone-recordings</a>
+. As Tim Leung points out, while it’s not difficult to find the audio control and make it play what is recorded, it isn’t obvious how to actually save or do something with that recording. We don’t currently use Dataverse, which his blog states is the ideal data source, but it works just fine with SharePoint as our data source.</p>
+<p>Now I was an English teacher and do understand the importance of citing your sources, but I can’t find the resource that helped me figure out exactly how to Collect that recording to SharePoint, but here is the code:</p>
+<p><img src="https:/images/how-to-create-a-name-pronunciation-database-using-the-power-platform2.png" alt="Placeholder"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Set(NowVar, Now());
+</span></span><span style="display:flex;"><span>Set(TempRecordingVar,Microphone1.Audio);
+</span></span><span style="display:flex;"><span>Set(ShowRecordingGifVar,false);
+</span></span><span style="display:flex;"><span>Set(tempJSON,JSON(Microphone1.Audio,IncludeBinaryData));
+</span></span><span style="display:flex;"><span>Set(StringB64Var, Mid(tempJSON, 25,Len(tempJSON)-25));
+</span></span><span style="display:flex;"><span>Set(HideTempAudioVar,true)
+</span></span></code></pre></div><p>So, when you stop recording, a bunch of variables get set. We set the time of the recording, the audio of the recording into TempRecordingVar, ignore the RecordingGif because that wasn’t working, we set tempJSON and StringB64Var for our Power Automate flow coming up, and honestly I need comments in Power Automate code because I don’t remember the purpose of the last variable.</p>
+<p><img src="https:/images/how-to-create-a-name-pronunciation-database-using-the-power-platform3.png" alt="Placeholder"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Collect(TempSpeechRecCol,{
+</span></span><span style="display:flex;"><span>    Audio: TempRecordingVar,
+</span></span><span style="display:flex;"><span>    Duration: Audio1.Duration,
+</span></span><span style="display:flex;"><span>    RecordingName: TextInput1.Text,
+</span></span><span style="display:flex;"><span>    Recording: StringB64Var
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>Reset(TextInput1);
+</span></span></code></pre></div><p>Basically, we wanted this button to grab the recording and the conditions of it. The TextInput1 is a non-visible text input field with Default set to “User().FullName &amp; “-NamePronunciationAudio””, so we define that the file name will always be set up in a certain way – like LindsayShelton-NamePronunciationAudio. The StringB64Var is a bunch of complicated stuff that I don’t fully understand, and if you can find my source for how I did it, I’d be happy to add it!</p>
+<p>The audio control doesn’t show up until the Preview Audio button is pressed. Its Items control is set to “Last(FirstN(TempSpeechRecCol,1))” so it is going to show people the last recording they made. If they hit the trash button, the OnSelect is set to “Remove(TempSpeechRecCol,ThisItem);”.</p>
+<p>There’s actually a Gallery component set up behind that audio control:</p>
+<p><img src="https:/images/how-to-create-a-name-pronunciation-database-using-the-power-platform4.png" alt="Placeholder"></p>
+<p>For the Upload Audio File button, the OnSelect is set to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>UpdateContext({pressedbutton: !pressedbutton});
+</span></span><span style="display:flex;"><span>ForAll(TempSpeechRecCol,SaveAudioFiletoSPO.Run(Recording, RecordingNameGal.Text, DurationGal.Text));
+</span></span></code></pre></div><p>Some of that code is due to the neumorphic button (the UpdateContext), but the rest captures a few important variables and triggers a run of my Power Automate flow – something that I know how to explain much better than I know how to explain and document a PowerApp!</p>
+<p>Two last things – I was striving to make this an accessible app, so I made sure to add accessibility labels on every component AND I used a Shane Young video (who hasn’t? <a href="https://www.youtube.com/watch?v=1tJk7LxgocA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=1tJk7LxgocA</a>
+) to create a popup help where the question mark icon is.</p>
+<p><a href="https://github.com/pnp/powerapps-samples/tree/main/samples/name-pronunciation-recorder">Link to the Power App sample</a></p>
+<h2 id="the-power-automate-flow">The Power Automate Flow</h2>
+<p>I created a flow with a Power Apps trigger, which I then later pulled into the Power App and called SaveAudioFiletoSPO.</p>
+<p>Next I initialized a variable called Base64ToAudio, which takes a variable from the trigger body (triggerBody()[‘Initializevariable_Value’] and assigns it to my new variable:</p>
+<p><img src="https:/images/how-to-create-a-name-pronunciation-database-using-the-power-platform5.png" alt="Placeholder"></p>
+<p>I then use a Create file block for a very basic SharePoint Document Library that I have set up. The only changes I believe I made to it were to change the Title column to “Name” and added a “Duration” column.</p>
+<p>For the File Name, we have that stored in a variable from Power Apps – Createfile_FileName.</p>
+<p>The File Content was the trickiest part, and a tutorial that I found (and can’t find again, arg!) actually had me do this in a way that didn’t work at first. I had to use PowerFX: base64ToBinary and fed it my new variable, so “base64ToBinary(variables(‘Base64ToAudio’))”.</p>
+<p>Lastly, I added an Update file properties action, and simply added my last exported variable from the Power App – Updatefileproperties_Duration – to the Duration column I added.</p>
+<p><a href="https://github.com/pnp/powerautomate-samples/tree/main/samples/send-name-pronunciation-recording-to-library">Link to the Power Automate sample</a></p>
+<h2 id="conclusions">Conclusions</h2>
+<p>Overall, I had an amazing team to help publicize and get feedback on this tool, so huge shout outs to Caroline, Sharon, Jessica, Jessie, Jenny, and Sherry.</p>
+<p>How did the Hackathon go? Well…</p>
+<p><img src="https:/images/how-to-create-a-name-pronunciation-database-using-the-power-platform6.png" alt="Placeholder"></p>
+<p>We won! The institute voted us as their favorite project, something I am very proud of! To date, we have gathered 55 recordings and hope to gather even more as time goes on and people see how valuable of a resource (we think) it is. We’ve received great feedback, all for a project that took a team of women only three days to get into production!</p>
+<p>For us, this project was a valuable use of time, and I hope that this blog at least gets you started on the path to creating your own name pronunciation database (at least until Delve gets one added OOB!).</p>
+
+  </article>
+<div class="px-2 mb-2">
+  
+  <script src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</div>
+<div class="bg-pink-100 dark:bg-gray-900">
+  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Follow me</div>
+      <p class="opacity-60">Follow along for Power Platform, M365, and cat goodness</p>
+    </div>
+
+    <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
+      
+
+      
+      <li>
+        <a
+          href="https://twitter.com/LShelton_Tech"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a
+          href="https://linkedin.com/in/lindsaytshelton"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    </ul>
+  </div>
+</div>
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    Copyright © 2023 - Lindsay Shelton · All rights reserved
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https:/js/scripts.min.js"></script>
+
+
+
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
+</body>
+</html>

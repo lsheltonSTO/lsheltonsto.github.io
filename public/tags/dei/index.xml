@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DEI on Lindsay T. Shelton</title>
+    <link>https:/tags/dei/</link>
+    <description>Recent content in DEI on Lindsay T. Shelton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 30 Sep 2022 14:49:05 -0500</lastBuildDate><atom:link href="https:/tags/dei/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To: Create a Name Pronunciation Database Using the Power Platform (now with samples links!)</title>
+      <link>https:/blog/202209how-to-create-a-name-pronunciation-database-using-the-power-platform/</link>
+      <pubDate>Fri, 30 Sep 2022 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202209how-to-create-a-name-pronunciation-database-using-the-power-platform/</guid>
+      <description>The Problem and Requirements I work at a medical research institute that is incredibly diverse. We have scientists from all over the globe, which can lead to some frustration on everyone’s part when it comes to the diverse names that these employees have. To be clear – it’s not just an issue of names that aren’t “American” causing “problems” – we have so many immigrant employees that even names that may seem straightforward, like “Lindsay”, can be confusing.</description>
+    </item>
+    
+  </channel>
+</rss>

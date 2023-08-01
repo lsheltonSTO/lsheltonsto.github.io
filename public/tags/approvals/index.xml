@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>approvals on Lindsay T. Shelton</title>
+    <link>https:/tags/approvals/</link>
+    <description>Recent content in approvals on Lindsay T. Shelton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 Feb 2023 14:49:05 -0500</lastBuildDate><atom:link href="https:/tags/approvals/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Approvals Using SharePoint Groups</title>
+      <link>https:/blog/202302approvals-using-sharepoint-groups/</link>
+      <pubDate>Wed, 15 Feb 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202302approvals-using-sharepoint-groups/</guid>
+      <description>At my office, we have a lot of documents that undergo an annual review process. I was tasked pretty early on in my time here to help move this process from an Access database into the cloud. I could go on and on about the intricacies of what we set up, but I wanted to zero in on just one feature of the Power Automate flows that are set up: the group approval.</description>
+    </item>
+    
+  </channel>
+</rss>

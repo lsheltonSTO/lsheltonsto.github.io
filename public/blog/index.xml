@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Lindsay T. Shelton</title>
+    <link>https:/blog/</link>
+    <description>Recent content in Blog on Lindsay T. Shelton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 01 Jun 2023 14:49:05 -0500</lastBuildDate><atom:link href="https:/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Microsoft Power Platform Conference – Trip of a Lifetime</title>
+      <link>https:/blog/202306microsoft-power-platform-conference-trip-of-a-lifetime/</link>
+      <pubDate>Thu, 01 Jun 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202306microsoft-power-platform-conference-trip-of-a-lifetime/</guid>
+      <description>I was going through a really rough time. I had experienced a loss that so many do experience – one of my 14 year old littermate kitties, Archie, had taken a sudden turn and had to be put to sleep. It was almost my birthday and I had lost one of my beloved cats and I was feeling very sorry for myself.
+However, it was time to pull myself together and pack my bags, because I was headed to the inaugural Power Platform Conference in Orlando, FL all my myself.</description>
+    </item>
+    
+    <item>
+      <title>How To: Block Downloads with Stream on SharePoint</title>
+      <link>https:/blog/202305how-to-block-downloads-with-stream-on-sharepoint/</link>
+      <pubDate>Wed, 24 May 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202305how-to-block-downloads-with-stream-on-sharepoint/</guid>
+      <description>Anyone else stuck in a slow migration nightmare? That may be a tad dramatic, but…
+I gotta be me, y’know?
+Anyway, a big hurdle came up in our Stream Classic migration with a user who had a really good question. How can we block downloads with this new-fangled Stream option? It was a setting within Stream Classic that was being used by this department extenstively, and it was actually a legal requirement.</description>
+    </item>
+    
+    <item>
+      <title>Sending Flow Result Messages Back to a Power App</title>
+      <link>https:/blog/202304sending-flow-result-messages-back-to-a-power-app/</link>
+      <pubDate>Fri, 14 Apr 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202304sending-flow-result-messages-back-to-a-power-app/</guid>
+      <description>Bing AI Image Creator got a little weird, but let’s go with it. The others were far weirder.
+Recently I was asked if I could add a success message to a Power App – something to indicate that they’ve clicked the button. I added a beautiful spinner and dusted off my hands, job well done.
+Well, no, they wanted to know that the Power Automate flow that the button triggered had actually run successfully.</description>
+    </item>
+    
+    <item>
+      <title>Use Power Automate to Send an Email Reminder 24 Hours Before an Event</title>
+      <link>https:/blog/202303use-power-automate-to-send-an-email-reminder-24-hours-before-an-event/</link>
+      <pubDate>Mon, 27 Mar 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202303use-power-automate-to-send-an-email-reminder-24-hours-before-an-event/</guid>
+      <description>I couldn’t believe this wasn’t a template already when I searched, so I figured – blog post it is! Two in a month, I did it again!
+The Use Case This one is pretty simple. A user reached out and said she had a idea for how to use Power Automate, but she wasn’t sure how to make it happen. This immediately spikes my adrenaline, and I start searching triggers and actions right away.</description>
+    </item>
+    
+    <item>
+      <title>The Painful Process of Using Custom Values for OneNote Power Automate References</title>
+      <link>https:/blog/202303the-painful-process-of-using-custom-values-for-onenote-power-automate-references/</link>
+      <pubDate>Wed, 15 Mar 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202303the-painful-process-of-using-custom-values-for-onenote-power-automate-references/</guid>
+      <description>I didn’t realize how painful this process would be until I embarked upon it, and so, Dear Reader, I’m looking to combine the resources that helped me into one place to help you if you are to find yourself in a similar scenario.
+The Use Case I was recently given a scenario where, as an important step in a proposed new process, a OneNote notebook nestled within a private Teams channel would be populated with a new page whenever a flow was triggered.</description>
+    </item>
+    
+    <item>
+      <title>Utilizing the Contents of a SharePoint Image Column Elsewhere</title>
+      <link>https:/blog/202302utilizing-the-contents-of-a-sharepoint-image-column-elsewhere/</link>
+      <pubDate>Mon, 27 Feb 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202302utilizing-the-contents-of-a-sharepoint-image-column-elsewhere/</guid>
+      <description>So I recently met with someone who had a conundrum. They had a SharePoint list with an Image type column, relatively new-ish, and they wanted to post the contents of this column to Teams on a regular cadence, along with other text column content. They had tried every dynamic content option related to the Image column in Power Automate and nothing was working. I found quite a few blog posts that got us close, but not all the way.</description>
+    </item>
+    
+    <item>
+      <title>Connections in Power Automate (and How to Take Control of Them)</title>
+      <link>https:/blog/202302connections-in-power-automate/</link>
+      <pubDate>Thu, 23 Feb 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202302connections-in-power-automate/</guid>
+      <description>Do you have a flow running, proud as can be, except… the emails it sends out says they are from you? Did you get help on a flow and now it says that the SharePoint library is being updated by your coworker?
+All of this is due to ~connections~ in Power Automate. I’m going to attempt to quickly introduce them, go over how to change and then remove them, and explain a best practice with connections.</description>
+    </item>
+    
+    <item>
+      <title>Approvals Using SharePoint Groups</title>
+      <link>https:/blog/202302approvals-using-sharepoint-groups/</link>
+      <pubDate>Wed, 15 Feb 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202302approvals-using-sharepoint-groups/</guid>
+      <description>At my office, we have a lot of documents that undergo an annual review process. I was tasked pretty early on in my time here to help move this process from an Access database into the cloud. I could go on and on about the intricacies of what we set up, but I wanted to zero in on just one feature of the Power Automate flows that are set up: the group approval.</description>
+    </item>
+    
+    <item>
+      <title>Calling Multiple APIs in One Power BI Report (And All the Work-Arounds That Required)</title>
+      <link>https:/blog/202302calling-multiple-apis-in-one-power-bi-report/</link>
+      <pubDate>Thu, 02 Feb 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202302calling-multiple-apis-in-one-power-bi-report/</guid>
+      <description>So, this one was a lot more difficult than it should have been. It started with a plea for help on Twitter and a really helpful first blog post (created for me, so honored!) from Andy O’Donnell here. (He’s super nice, follow him on Twitter too!) Andy got me going, which I am SO grateful for… but then I ran into an error. And then another error. And another. You get the idea.</description>
+    </item>
+    
+    <item>
+      <title>Frankenstein’s Monster Error Handling for Power Automate Cloud Flows</title>
+      <link>https:/blog/202301frankensteins-monster-error-handling-for-power-automate-cloud-flows/</link>
+      <pubDate>Thu, 26 Jan 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202301frankensteins-monster-error-handling-for-power-automate-cloud-flows/</guid>
+      <description>Be warned now – the content in this post is not 100% from my own brain and genius. In fact, it is cobbled together from three different geniuses who were kind enough to post their own methods for error handling in Power Automate over the years. I’ve judiciously bookmarked those posts, just waiting for when I had time and motivation to tackle error handling in my own flows, and today was that day.</description>
+    </item>
+    
+    <item>
+      <title>How To: Create a Name Pronunciation Database Using the Power Platform (now with samples links!)</title>
+      <link>https:/blog/202209how-to-create-a-name-pronunciation-database-using-the-power-platform/</link>
+      <pubDate>Fri, 30 Sep 2022 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202209how-to-create-a-name-pronunciation-database-using-the-power-platform/</guid>
+      <description>The Problem and Requirements I work at a medical research institute that is incredibly diverse. We have scientists from all over the globe, which can lead to some frustration on everyone’s part when it comes to the diverse names that these employees have. To be clear – it’s not just an issue of names that aren’t “American” causing “problems” – we have so many immigrant employees that even names that may seem straightforward, like “Lindsay”, can be confusing.</description>
+    </item>
+    
+    <item>
+      <title>Track Your Productivity Using Outlook Categories and Power BI (Desktop)</title>
+      <link>https:/blog/202206track-your-productivity-using-outlook-categories-and-power-bi/</link>
+      <pubDate>Sun, 12 Jun 2022 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202206track-your-productivity-using-outlook-categories-and-power-bi/</guid>
+      <description>Basic Category Visualization Start creating data to gather by creating your Outlook categories and categorizing all of your appointments and meetings over a period of time. Download Power BI Desktop for free and open it up Click “Get Data” Search for “Exchange” and connect to “Microsoft Exchange” Put in your email address that you want to connect The first time you do it, you will have a screen to connect via Exchange or Microsoft.</description>
+    </item>
+    
+    <item>
+      <title>How To: Display Your M365 Group in Outlook (If You Can&#39;t Find It)</title>
+      <link>https:/blog/202102how-to-display-your-m365-group-in-outlook/</link>
+      <pubDate>Wed, 24 Feb 2021 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202102how-to-display-your-m365-group-in-outlook/</guid>
+      <description>If you’ve spent much time with the Microsoft 365 eco-system, then you know as well as I do that there are countless ways to create new M365 groups. Everyone has their own preferences, certainly, and there isn’t really a need to pick only one method. What gets created and set-up as a result of creating a group, however, DOES change depending on which method you pick, which leads me to the use case that prompted this blog.</description>
+    </item>
+    
+    <item>
+      <title>Vacation, All I Ever Wanted</title>
+      <link>https:/blog/202009vacation-all-i-ever-wanted/</link>
+      <pubDate>Fri, 25 Sep 2020 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202009vacation-all-i-ever-wanted/</guid>
+      <description>Actual photo of me contemplating how cool waves are.
+Burnout is a disease we are all capable of catching. It’s one I battled for years as a teacher, and while I hadn’t yet caught it in my new career, I could feel it lurking much sooner than anticipated. It isn’t that I’m unhappy or unfulfilled because I’m neither of those things – I have new challenges (that I’m capable of meeting) every day and I learn new things constantly.</description>
+    </item>
+    
+    <item>
+      <title>How To: Share Your Screen AND See Your Audience in Microsoft Teams</title>
+      <link>https:/blog/202009how-to-share-your-screen-and-see-your-audience-in-microsoft-teams/</link>
+      <pubDate>Thu, 03 Sep 2020 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202009how-to-share-your-screen-and-see-your-audience-in-microsoft-teams/</guid>
+      <description>If you are able to have more than one monitor, your life as virtual educator or work from home employee is a lot easier. One of those ways that life is easier is that you can both share your screen to present whatever information is relevant while also seeing your audience. It isn’t immediately clear, however, exactly how to see your audience at the same time, which is what this post will clear up for you.</description>
+    </item>
+    
+    <item>
+      <title>A Free Way to Improve Employee Productivity</title>
+      <link>https:/blog/202008a-free-way-to-improve-employee-productivity/</link>
+      <pubDate>Wed, 19 Aug 2020 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202008a-free-way-to-improve-employee-productivity/</guid>
+      <description>Businesses (and people in general) love getting things for free. Cut costs? Awesome. Save money? Super. So what if I were to tell you that there is a FREE way to make employees happier, more productive, and more likely to stay at your company?
+Spoiler alert – it’s really not rocket science. Also, as a disclaimer, it may not work for everyone.
+However, I discovered recently that there is something essential for my workplace happiness.</description>
+    </item>
+    
+    <item>
+      <title>How To: Change Team Names in Teams for Education</title>
+      <link>https:/blog/202008how-to-change-team-names-in-teams-for-education/</link>
+      <pubDate>Thu, 06 Aug 2020 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202008how-to-change-team-names-in-teams-for-education/</guid>
+      <description>It’s almost fall and your IT department is swamped making hundreds if not thousands of Teams for teachers and their classes. However, sometimes their naming conventions they’ve utilized might not work best for teachers. We all know that IT doesn’t have the time to go in and fix the name of your Team to suit you best, so I’ve put together a tutorial for how you can make those changes yourself.</description>
+    </item>
+    
+    <item>
+      <title>On Being a Woman in Tech</title>
+      <link>https:/blog/202007on-being-a-woman-in-tech/</link>
+      <pubDate>Thu, 09 Jul 2020 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202007on-being-a-woman-in-tech/</guid>
+      <description>I am in a special, rare butterfly situation. At this moment, I only work with other women at Smarter Consulting. It’s me and four other smart, talented women who came from a variety of backgrounds, both in terms of our education and our careers. Some of us didn’t graduate college and some of us hold master’s degrees. Some of us have never worked in a strictly tech field (me).</description>
+    </item>
+    
+    <item>
+      <title>Changing Careers During a Pandemic</title>
+      <link>https:/blog/202006changing-careers-during-a-pandemic/</link>
+      <pubDate>Fri, 26 Jun 2020 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202006changing-careers-during-a-pandemic/</guid>
+      <description>Growing up, I always knew I was going to become a teacher. Sure, my first choice was famous actress, but my solid backup plan was always elementary education. The only time I questioned my plan was when I entered freshman year of college and realized — not only did I not want to teach math and science, but that small children were kind of scary to me. So, after one semester, I changed my major to Secondary English Education and I was back on track for my life plan.</description>
+    </item>
+    
+    <item>
+      <title>Greetings Earthlings</title>
+      <link>https:/blog/202006greetings-earthlings/</link>
+      <pubDate>Sat, 20 Jun 2020 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202006greetings-earthlings/</guid>
+      <description>While secondary school-me could definitely imagine this, previous adult-me wouldn’t have guessed that I’d be taking up blogging again in my mid-30s. However, I’ve gone through a lot of transitions in my life lately, and since they’ve been good ones instead of traumatic ones, it occurred to me that other people might be interested in my journey as well.
+Or maybe no one will be interested, but at least I will have a record of this time for myself because I am going through so much change.</description>
+    </item>
+    
+  </channel>
+</rss>

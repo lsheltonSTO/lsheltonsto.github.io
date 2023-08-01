@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>stream classic on Lindsay T. Shelton</title>
+    <link>https:/tags/stream-classic/</link>
+    <description>Recent content in stream classic on Lindsay T. Shelton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 24 May 2023 14:49:05 -0500</lastBuildDate><atom:link href="https:/tags/stream-classic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To: Block Downloads with Stream on SharePoint</title>
+      <link>https:/blog/202305how-to-block-downloads-with-stream-on-sharepoint/</link>
+      <pubDate>Wed, 24 May 2023 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202305how-to-block-downloads-with-stream-on-sharepoint/</guid>
+      <description>Anyone else stuck in a slow migration nightmare? That may be a tad dramatic, but…
+I gotta be me, y’know?
+Anyway, a big hurdle came up in our Stream Classic migration with a user who had a really good question. How can we block downloads with this new-fangled Stream option? It was a setting within Stream Classic that was being used by this department extenstively, and it was actually a legal requirement.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>microsoft outlook on Lindsay T. Shelton</title>
+    <link>https:/tags/microsoft-outlook/</link>
+    <description>Recent content in microsoft outlook on Lindsay T. Shelton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 12 Jun 2022 14:49:05 -0500</lastBuildDate><atom:link href="https:/tags/microsoft-outlook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Track Your Productivity Using Outlook Categories and Power BI (Desktop)</title>
+      <link>https:/blog/202206track-your-productivity-using-outlook-categories-and-power-bi/</link>
+      <pubDate>Sun, 12 Jun 2022 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202206track-your-productivity-using-outlook-categories-and-power-bi/</guid>
+      <description>Basic Category Visualization Start creating data to gather by creating your Outlook categories and categorizing all of your appointments and meetings over a period of time. Download Power BI Desktop for free and open it up Click “Get Data” Search for “Exchange” and connect to “Microsoft Exchange” Put in your email address that you want to connect The first time you do it, you will have a screen to connect via Exchange or Microsoft.</description>
+    </item>
+    
+    <item>
+      <title>How To: Display Your M365 Group in Outlook (If You Can&#39;t Find It)</title>
+      <link>https:/blog/202102how-to-display-your-m365-group-in-outlook/</link>
+      <pubDate>Wed, 24 Feb 2021 14:49:05 -0500</pubDate>
+      
+      <guid>https:/blog/202102how-to-display-your-m365-group-in-outlook/</guid>
+      <description>If you’ve spent much time with the Microsoft 365 eco-system, then you know as well as I do that there are countless ways to create new M365 groups. Everyone has their own preferences, certainly, and there isn’t really a need to pick only one method. What gets created and set-up as a result of creating a group, however, DOES change depending on which method you pick, which leads me to the use case that prompted this blog.</description>
+    </item>
+    
+  </channel>
+</rss>
