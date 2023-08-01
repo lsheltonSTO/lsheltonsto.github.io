@@ -1,7 +1,7 @@
 ---
 title: "On Being a Woman in Tech"
 date: 2020-07-09T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["personal","career"]
 thumbnail: /images/on-being-a-woman-in-tech.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Sending Flow Result Messages Back to a Power App"
 date: 2023-04-14T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["power apps","power automate"]
 thumbnail: /images/sending-flow-result-messages-back-to-a-power-app6.png

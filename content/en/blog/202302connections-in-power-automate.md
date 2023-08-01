@@ -1,7 +1,7 @@
 ---
 title: "Connections in Power Automate (and How to Take Control of Them)"
 date: 2023-02-23T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["connections","power automate"]
 thumbnail: /images/connections-in-power-automate1.png

@@ -1,7 +1,7 @@
 ---
 title: "Approvals Using SharePoint Groups"
 date: 2023-02-15T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["how to","approvals","sharepoint","power automate"]
 thumbnail: /images/approvals-using-sharepoint-groups3.png

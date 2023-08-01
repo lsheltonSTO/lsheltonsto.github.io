@@ -1,7 +1,7 @@
 ---
 title: "How To: Display Your M365 Group in Outlook (If You Can't Find It)"
 date: 2021-02-24T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["how to","microsoft teams","microsoft outlook"]
 thumbnail: /images/how-to-display-your-m365-group-in-outlook2.png

@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Power Platform Conference – Trip of a Lifetime"
 date: 2023-06-01T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["personal", "power automate", "power apps", "power platform conference"]
 thumbnail: /images/microsoft-power-platform-conference-trip-of-a-lifetime8.jpg

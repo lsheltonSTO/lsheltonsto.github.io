@@ -1,7 +1,7 @@
 ---
 title: "How To: Create a Name Pronunciation Database Using the Power Platform (now with samples links!)"
 date: 2022-09-30T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["how to","DEI", "hackathon", "power apps", "power automate"]
 thumbnail: /images/how-to-create-a-name-pronunciation-database-using-the-power-platform1.png

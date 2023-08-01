@@ -1,7 +1,7 @@
 ---
 title: "Calling Multiple APIs in One Power BI Report (And All the Work-Arounds That Required)"
 date: 2023-02-02T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["how to","apis","power bi"]
 thumbnail: /images/calling-multiple-apis-in-one-power-bi-report4.png

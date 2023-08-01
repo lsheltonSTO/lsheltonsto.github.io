@@ -1,7 +1,7 @@
 ---
 title: "How To: Share Your Screen AND See Your Audience in Microsoft Teams"
 date: 2020-09-03T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["how to","microsoft teams","teams for education"]
 thumbnail: /images/how-to-share-your-screen-and-see-your-audience-in-microsoft-teams6.png

@@ -1,7 +1,7 @@
 ---
 title: "Track Your Productivity Using Outlook Categories and Power BI (Desktop)"
 date: 2022-06-12T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["how to","microsoft outlook","power bi","outlook categories","productivity"]
 thumbnail: /images/track-your-productivity-using-outlook-categories-and-power-bi1.png

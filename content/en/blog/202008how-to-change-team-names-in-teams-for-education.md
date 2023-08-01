@@ -1,7 +1,7 @@
 ---
 title: "How To: Change Team Names in Teams for Education"
 date: 2020-08-06T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["how to","microsoft teams","teams for education"]
 thumbnail: /images/how-to-change-team-names-in-teams-for-education.png

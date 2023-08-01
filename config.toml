@@ -1,10 +1,7 @@
-baseurl = "https://"
+baseurl = "https://blist.vercel.app"
 metaDataFormat = "yaml"
-title = "Lindsay T. Shelton"
+title = "Blist Multilingual Theme"
 theme = "blist"
-canonifyurls = true
-builddrafts = true 
-googleAnalytics = 'G-CN3PDT3T20'
 
 DefaultContentLanguage = "en"
 DefaultContentLanguageInSubdir = true
@@ -117,9 +114,6 @@ DefaultContentLanguageInSubdir = true
   [[params.homepage.social.icons]]
     website = "linkedin"
     url = "https://linkedin.com/in/lindsaytshelton"
-  [[params.homepage.social.icons]]
-    website = "buymeacoffee"
-    url = "https://bmc.link/lindsaytshelton"
 
 
 [[menu.main]]

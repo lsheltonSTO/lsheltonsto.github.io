@@ -1,7 +1,7 @@
 ---
 title: "The Painful Process of Using Custom Values for OneNote Power Automate References"
 date: 2023-03-15T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["onenote","power automate"]
 thumbnail: /images/the-painful-process-of-using-custom-values-for-onenote-power-automate-references10.png
