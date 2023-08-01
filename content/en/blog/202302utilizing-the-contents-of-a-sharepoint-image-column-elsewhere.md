@@ -1,7 +1,7 @@
 ---
 title: "Utilizing the Contents of a SharePoint Image Column Elsewhere"
 date: 2023-02-27T14:49:05-05:00
-draft: true
+draft: false
 author: "Lindsay Shelton"
 tags: ["sharepoint","power automate"]
 thumbnail: /images/utilizing-the-contents-of-a-sharepoint-image-column-elsewhere12.png

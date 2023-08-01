@@ -1,7 +1,7 @@
 ---
 title: "Changing Careers During a Pandemic"
 date: 2020-06-26T14:49:05-05:00
-draft: true
+draft: false
 author: "Lindsay Shelton"
 tags: ["personal","career"]
 thumbnail: /images/changing-careers-during-a-pandemic.png

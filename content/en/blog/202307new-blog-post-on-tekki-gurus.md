@@ -4,7 +4,7 @@ date: 2023-07-31T14:49:05-05:00
 draft: false
 author: "Lindsay Shelton"
 tags: ["power automate", "microsoft teams", "outlook", "microsoft forms"]
-thumbnail: /images/tekkiblog1.jpg
+thumbnail: /images/tekkiblog1.png
 hidePageThumbnail: false
 toc: false
 

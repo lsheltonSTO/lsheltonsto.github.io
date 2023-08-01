@@ -1,7 +1,7 @@
 ---
 title: "How To: Block Downloads with Stream on SharePoint"
 date: 2023-05-24T14:49:05-05:00
-draft: true
+draft: false
 author: "Lindsay Shelton"
 tags: ["stream classic","how to","stream on sharepoint", "sharepoint"]
 thumbnail: /images/how-to-block-downloads-with-stream-on-sharepoint11.png

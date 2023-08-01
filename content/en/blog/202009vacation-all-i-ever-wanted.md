@@ -1,7 +1,7 @@
 ---
 title: "Vacation, All I Ever Wanted"
 date: 2020-09-25T14:49:05-05:00
-draft: true
+draft: false
 author: "Lindsay Shelton"
 tags: ["personal", "career"]
 thumbnail: /images/vacation-all-i-ever-wanted.jpg

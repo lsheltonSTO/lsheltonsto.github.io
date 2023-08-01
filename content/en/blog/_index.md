@@ -1,4 +1,4 @@
 ---
-author: Katheryn Fox
-title: Blog
+author: Lindsay Shelton
+title: Lindsay T Shelton
 ---
