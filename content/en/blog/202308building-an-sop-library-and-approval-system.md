@@ -1,6 +1,6 @@
 ---
 title: "Building a SharePoint SOP Library and Approval System"
-date: 2023-08-08T14:49:05-05:00
+date: 2023-08-07T14:49:05-05:00
 draft: false
 author: "Lindsay Shelton"
 tags: ["sharepoint","power automate", "how to"]
