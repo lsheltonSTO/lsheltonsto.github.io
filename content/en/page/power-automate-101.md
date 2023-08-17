@@ -48,6 +48,10 @@ Pre-Requisite: Make a SharePoint list with the columns First Name, Last Name, Fa
 
 You don’t need to stop where we did!  For example, what would make sense to do after an approval or rejection in Exercise 2?
 
+## Additional Learning
 
+https://learn.microsoft.com/en-us/training/modules/get-started-flows/
+https://app.pluralsight.com/library/courses/microsoft-power-automate-getting-started/table-of-contents 
+https://training.powerapps911.com/courses/power-apps-and-power-automate-getting-started 
 
 
