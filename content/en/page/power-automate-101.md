@@ -2,7 +2,7 @@
 author: Lindsay Shelton
 title: Power Automate 101
 date: 2023-08-14
-description: For #MPPC23
+description: For MPPC23
 keywords: ["power automate", "how to"]
 type: about
 
