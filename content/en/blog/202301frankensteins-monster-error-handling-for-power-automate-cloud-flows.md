@@ -230,7 +230,12 @@ In your Compose block, type the following:
 
 Change the code in the 'Scope - Catch' section to match the name of your Scope - Catch block.
 
-Then add a Terminate block.  For the required "Status" field, put in the output of your Compose block you just made.  If you do the extra work to grab the error message, it can go into this block as well, but mine will be left blank.  Now the flow will terminate as succeeded or as failed based on how the flow actually performend, NOT based on the outcome of the Catch block.
+Then add a Terminate block.  For the required "Status" field, put in this expression (modify the name as necessary):
+```html
+outputs('Compose_-_Flow_Outputs')?['status']
+````
+
+If you do the extra work to grab the error message, it can go into this block as well, but mine will be left blank.  Now the flow will terminate as succeeded or as failed based on how the flow actually performend, NOT based on the outcome of the Catch block.
 
 ## In Closing
 I want to again give a huge shoutout to the blogs that were the original hosts for my Frankenstein’s Monster of Error Handling:
