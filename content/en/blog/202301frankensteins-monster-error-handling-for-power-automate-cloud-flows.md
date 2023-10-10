@@ -212,6 +212,26 @@ Here’s what my final adaptive card looks like in our designated channel:
 
 The hardest part may be finding a flow with an error to test. Luckily for me, one of my newer flows had an adaptive card get cranky with quotation marks in a title (I can’t believe adaptive cards betrayed me in this way so early in our relationship!), so I was set for testing.
 
+## The Update - Using the Finally Block
+After a great #MPPC23 where I got to meet and see sessions from both Norm Young and Matthew Devaney, I decided to update my error handling to include the Finally block.  The main thing missing in my flow I've built here is the fact that, due to the Catch block, the flows will all show as "Succeeded", even when they didn't.  The use of a Terminate block in the Finally scope will allow us to change that.
+
+So, if you don't already have a "Scope - Finally" block, go ahead and make one.  Configure the run after settings by checking every single box - we want this to run whether the flow succeeded, failed, was skipped, or timed out.
+
+In the Finally block, we are going to add two blocks (thanks to Matthew for the expression here).  If you want to get fancier and grab the error message, it's possible, but it involved a few more code blocks than I wanted to deal with on every single one of my Production workflows, especially when I grab the flow run URL and I can see the error pretty quickly.
+
+First block - add a Compose block.  We are going to make a little JSON here because we are going to use one Terminate block.  Now, you could do a different expression and use some branching to build two terminate blocks based on Success or Failure, but Matthew Devaney has a way to do it all in just the two blocks.
+
+In your Compose block, type the following:
+```html
+{
+    "status": @{if(equals(actions('Scope_-_Catch')?['status'],'Skipped'),'Succeeded','Failed')}
+}
+````
+
+Change the code in the 'Scope - Catch' section to match the name of your Scope - Catch block.
+
+Then add a Terminate block.  For the required "Status" field, put in the output of your Compose block you just made.  If you do the extra work to grab the error message, it can go into this block as well, but mine will be left blank.  Now the flow will terminate as succeeded or as failed based on how the flow actually performend, NOT based on the outcome of the Catch block.
+
 ## In Closing
 I want to again give a huge shoutout to the blogs that were the original hosts for my Frankenstein’s Monster of Error Handling:
 
