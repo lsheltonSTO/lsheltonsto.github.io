@@ -9,7 +9,7 @@ type: about
 
 ![Placeholder](/images/weho-pride.jpg)
 
-I'm a 30-something in her second career just living the dream.  Currently I work for a medical research institute non-profit, working to support scientists in advancing our mission.
+I'm a 30-something in my second career just living the dream.  Currently I work for a medical research institute non-profit, working to support scientists in advancing our mission.
 
 I spent the last decade teaching English Language Arts.  During that time, I was selected to receive training to become a technology and pre-engineering teacher based on my aptitude for learning and adapting new technologies with my own students and colleagues.
 

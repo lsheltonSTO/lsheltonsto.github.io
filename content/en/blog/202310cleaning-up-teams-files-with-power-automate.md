@@ -1,6 +1,6 @@
 ---
 title: "Cleaning Up Teams Files with Power Automate"
-date: 2023-10-13T14:49:05-05:00
+date: 2023-10-13T12:49:05-05:00
 draft: false
 author: "Lindsay Shelton"
 tags: ["power automate", "microsoft teams", "how to"]
