@@ -20,3 +20,13 @@ In my spare time, I enjoy spending time with my two kittens Charlie and Trixie, 
 I do this for free because I enjoy doing it, but if I've helped you solve a problem and you feel so inclined, <a href="https://www.buymeacoffee.com/lindsaytshelton">buy me a Diet Coke</a> to keep my habit going and help me keep churning out more blogs!
 
 ![Placeholder](/images/mvp.jpg)
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

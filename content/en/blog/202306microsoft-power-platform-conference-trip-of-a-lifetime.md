@@ -56,3 +56,13 @@ Eight months later, I still text with this group (group text mysteriously named 
 We all still plan to be reunited at the second Microsoft Power Platform Conference in Vegas, October 3rd-5th, and I hope to meet even more amazing friends there! This post doesn’t even include the friends I met in Vegas at the M365 Conf (what’s up Kristine, Christina, Joel, Tanya, Angelo, and Angela!) or the amazing friends I’ve made on Twitter (Nat and Cat heyyyy). For an ambivert who was feeling very down, I’ve certainly made quite the network of awesome people and I know you can do the same!
 
 ![Placeholder](/images/microsoft-power-platform-conference-trip-of-a-lifetime9.jpg)
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

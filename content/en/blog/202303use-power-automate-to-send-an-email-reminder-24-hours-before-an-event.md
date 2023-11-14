@@ -59,3 +59,13 @@ Final flow looks like this:
 ![Placeholder](/images/use-power-automate-to-send-an-email-reminder-24-hours-before-an-event4.jpg)
 
 It’s short for me, okay? I’ll go pet you now, Charlie (yes that’s one of my kittens).
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

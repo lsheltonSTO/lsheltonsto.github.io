@@ -39,3 +39,13 @@ And that's it!  Seriously!  Go test it out!
 ![Placeholder](/images/cleaning-up-teams-files-with-power-automate4.png)
 
 Thanks to Lisa for the inspiration, and happy organizing!
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

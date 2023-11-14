@@ -32,3 +32,13 @@ That doesn’t mean you can’t also provide constructive feedback and critique 
 Learning how to be that person that can empower others takes work, and I will be the first to admit that I need to be better myself at giving out to my coworkers what I know means so much to me. It also matters what kind of compliment you are giving – telling me I have a lovely smile or a great sense of humor is nice, don’t get me wrong, but it doesn’t help me feel better about the work that I’m doing, which is what you and your employees are here for.
 
 So, think about what helps motivate you to do better. If you are like me and all you seek is positive reinforcement, do your best to put out into the world what you are looking for in return. Putting some free effort in to lift someone else up can make all the difference in the world to them.
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

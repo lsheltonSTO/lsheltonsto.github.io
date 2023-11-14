@@ -128,3 +128,12 @@ From here, we need to add some basic HTML to get a title. Here’s the code I us
 
 So, get creative with it – I’m sure I will as this project rolls along, but that’s the basics of it!
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

@@ -101,3 +101,13 @@ Set-UnifiedGroup -Identity "Company Group" -HiddenFromExchangeClientsEnabled: $f
 If it works and switches the value of that parameter successfully, the command line prompt will just come back up ready for you to enter another piece of code. If this wasn’t your problem and HiddenFromExchangeClientsEnabled was already set to false, you will get a yellow warning that reads something like: “WARNING: The command completed successfully but no settings of ‘MyListTest_e868c169-f00a-49fb-91bb-f067923eaea5’ have been modified.”
 
 Luckily for our client, no errors or warnings appeared. Instead, the missing group appeared in Outlook for the client to use normally, and all it took was a few cmdlets!
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

@@ -60,3 +60,13 @@ This doesn’t just work with PowerPoints – any content that you need to show 
 
 ## In Summary
 I hope this clears up any questions you have about utilizing multiple screens and monitors. It really has made my life a lot easier, as long as you don’t start clicking on your email on your shared screen, forgetting that it is shared (something I have definitely never ever done…). For more information, questions, or feedback, feel free to reach out to me on Twitter at @LShelton_Tech.
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

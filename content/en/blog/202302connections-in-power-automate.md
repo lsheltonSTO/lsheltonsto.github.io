@@ -63,3 +63,13 @@ The best case scenario is to get your flows running on at least one service acco
 - remove my connections from the “connections not actively in use” screen
 
 And voila! You have emails and notifications coming from a nice, generic account, and your name is off of everything. You can still remain a shared owner of the flow, even if your name isn’t on any of the connections.
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

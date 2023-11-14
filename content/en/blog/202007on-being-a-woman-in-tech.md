@@ -20,3 +20,13 @@ My boss, Sharon, has been in the IT business for longer than I’ve been in any 
 And you know what? Today was just one of those real, “I am a woman in tech and I can do it all!” sort of days. I helped a partner solve a problem with the power of Google and insisting that she click the thing she was sure that she had previously clicked, and yes, it turned out she hadn’t actually clicked the thing (which happens to the best of us). A coworker messaged me trying to figure out a problem that a client had emailed to Support, and I dug in and between the two of us, we figured out the solution. I was giddy as I opened up my Teams chat to show her that what we were wondering about had worked.
 
 I didn’t know how to do any of the things I did today when I woke up this morning. However, because I’m in a supportive environment and doing work that I like, I had trust placed in me that I could and would figure it out. How many days like that do you get?
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

@@ -98,3 +98,13 @@ NOTE – this is for the last three months. To make it more or less, change two 
 ![Placeholder](/images/track-your-productivity-using-outlook-categories-and-power-bi3.png)
 
 If you have any further questions, please feel free to reach out to me at @lshelton_tech on Twitter and I will do my best to help!
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

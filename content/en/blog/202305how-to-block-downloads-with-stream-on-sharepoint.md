@@ -76,3 +76,13 @@ For those curious, here’s what it looks like when someone with Restricted View
 So there are just simply options missing, but the experience is still intact and your users will likely not realize what they are missing out on!
 
 Thanks again to John Moore for coming through with that initial tip!
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

@@ -229,3 +229,13 @@ From there, it’s pretty simple! At least it can be for you – mine goes on an
 Just make sure that whichever Approval action you choose, assign it to your “approversEmails” variable.
 
 I go further and write my approver groups back to the SharePoint doc library – comment on this post or on Twitter/LinkedIn if you’d like a part 2 to this to find out how I do that!
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

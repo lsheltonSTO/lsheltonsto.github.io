@@ -163,3 +163,13 @@ Make sure there are no spaces between the two and that they are placed between t
 Run it, and hopefully, voila!
 
 ![Placeholder](/images/utilizing-the-contents-of-a-sharepoint-image-column-elsewhere12.png)
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

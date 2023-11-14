@@ -245,3 +245,13 @@ I want to again give a huge shoutout to the blogs that were the original hosts f
 - <a href="https://www.matthewdevaney.com/3-power-automate-error-handling-patterns-you-must-know/">Matthew Devaney – 3 Power Automate Error-Handling Patterns You Must Know</a> – Matthew also uses a shorter version of Try, Catch, Finally, but I mostly utilized his method for getting the flow run URL
 
 I’m forever thankful for the people who post blogs with their solutions, and I can only hope that my version of a solution is a helpful one-stop source for someone else!
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

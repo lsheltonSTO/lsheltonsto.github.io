@@ -145,3 +145,13 @@ We did some troubleshooting, and finally, for fun, I said… let’s just have y
 It worked just fine for him.
 
 So, I hope that this blog helps anyone who is unfortunate like me and can’t get this working for the life of them, but may you be luckier like my co-worker and get it working smoothly the way it was intended to work from the start.
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

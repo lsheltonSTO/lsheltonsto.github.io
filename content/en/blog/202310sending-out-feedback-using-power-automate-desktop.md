@@ -109,3 +109,13 @@ If I'm happy with how this looks, all I have to do is edit my loop (if you short
 I'll happily update this with how it works out for Emily once I find time to sit down with her and show her the magic of Power Automate Desktop that I've just shared with you - she has an 11 month old, so don't count on a firm date on that.
 
 I hope that this intro into Power Automate Desktop was relatively painless for you.  Maybe it will open the door to a lot more desktop automations, or maybe this is all you do with it - either way, if it saves you time (I'm especially looking at you, teachers!), then it's worth it.
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

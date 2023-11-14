@@ -112,3 +112,13 @@ How did the Hackathon go? Well…
 We won! The institute voted us as their favorite project, something I am very proud of! To date, we have gathered 55 recordings and hope to gather even more as time goes on and people see how valuable of a resource (we think) it is. We’ve received great feedback, all for a project that took a team of women only three days to get into production!
 
 For us, this project was a valuable use of time, and I hope that this blog at least gets you started on the path to creating your own name pronunciation database (at least until Delve gets one added OOB!).
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

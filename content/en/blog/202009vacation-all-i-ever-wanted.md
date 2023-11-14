@@ -25,3 +25,13 @@ Sure, we donned masks and only ate at places with outdoor patios and got rained 
 I know travel isn’t safe for everyone, as I have immunocompromised relatives and my family has also been affected by COVID. My vacation doesn’t have to look like your vacation. However, I realized that it is SO important to take some sort of break now. We are all undergoing a collective trauma that is both somehow incredibly condensed and yet feels neverending. We need to take care of ourselves and find a way to take a break of some kind. Find a few days to get yourself in that mindset of only worrying about where your next drink is coming from. Find a way to have an adventure, even if that adventure is socially distanced and very responsible.
 
 Now before you go scampering off to plan that break, I would be remiss if I didn’t warn you of the most real danger I encountered as a part of my vacation. It’s the vacation comedown. It is real and hard and turned me into a Grumpy Gus for a few days. Also, there’s a pandemic, so of course you must make careful safety considerations for yourself and your family. However, I can now take a mini-vacation every time I look at those pictures of me dancing in the waves, and the reward of time spent with friends was well worth the risk of traveling and having to come back to the real world.
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

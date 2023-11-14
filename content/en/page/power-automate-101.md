@@ -57,3 +57,12 @@ You don’t need to stop where we did!  For example, what would make sense to do
 * https://training.powerapps911.com/courses/power-apps-and-power-automate-getting-started 
 
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

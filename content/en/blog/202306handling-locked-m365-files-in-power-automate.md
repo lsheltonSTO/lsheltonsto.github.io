@@ -83,3 +83,13 @@ Then, lastly, there's a Set variable action for that updateMetadata variable.  W
 Click the blue "Done" button on both and get ready to test (might want to set the Delay shorter for testing).
 
 I've been using this error handling loop with great success for 2 years - I hope it also brings you success!
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

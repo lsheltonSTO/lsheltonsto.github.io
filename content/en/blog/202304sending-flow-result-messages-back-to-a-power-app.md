@@ -85,3 +85,13 @@ I put these elements into a group (a container would probably work just as well)
 ![Placeholder](/images/sending-flow-result-messages-back-to-a-power-app6.png)
 
 Hopefully Success! is what you will have with this method as well!
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>

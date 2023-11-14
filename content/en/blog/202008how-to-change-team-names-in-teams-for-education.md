@@ -56,3 +56,13 @@ Click “Site information” and from here, you can update the Site name.  For m
 FYI, mine didn’t update right away, but once I gave it some time, it updated to reflect my new class name. Also a quick note – the URL of your Home SharePoint site won’t change from the original, but you can at least change the display name.
 
 Good luck!
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>
