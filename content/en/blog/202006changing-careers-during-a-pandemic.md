@@ -30,3 +30,13 @@ I freelanced for Sharon the rest of the summer and on and off during the school 
 Then, two interesting things happened in March — Sharon confirmed with an offer letter that she was serious about wanting to hire me, and my fears about what it would be like to work from home became a non-issue when a global pandemic struck. I quickly realized that I could be productive from home because I had no choice — the schools closed and we had to pivot to online learning. My fears of change were a non-issue because, suddenly, even the way I had taught for the last 10 years looked very different without me having any choice in the matter. The next school year was and is as uncertain as anything else was, so why not choose now to change my whole life?
 
 Four weeks into my official career change, I have absolutely no regrets. The hoarseness I’d been experiencing on and off for years is gone. I’m sleeping better at night. I have the energy to go on social distance walks with friends. I even re-committed to losing the weight I’d put on in the years I’d been back in Kansas City. I receive positive affirmations at work, and especially working with a group of women, the few times I’ve gotten stressed and worried, they sensed that and helped soothe my nerves. Sure, the future is uncertain, but the future for most people in most fields is at least somewhat uncertain. What isn’t uncertain is that deviating from my path has prompted me to value my own worth and be willing to make more changes in the future. I’m sure that some people have found and followed a linear path in life and that it has worked out well for them, but I’m learning more and more that I might not be one of those people and that’s even better than I had realized.
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>
