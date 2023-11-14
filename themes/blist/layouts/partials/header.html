@@ -6,6 +6,18 @@
     {{ .Site.Title }}
     {{ end }}
   </a>
+  <!-- Google tag (gtag.js) -->
+  {{ if $.Site.Params.gtm }}
+  {{ $.Site.Params.gtm | safeHTML }}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>
+{{end}}
   <button class="mobile-menu-button md:hidden">
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>

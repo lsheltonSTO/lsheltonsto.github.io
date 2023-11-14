@@ -33,6 +33,8 @@ DefaultContentLanguageInSubdir = true
 [params]
   # Enable the darkmode toggle in header
   darkModeToggle = true
+#Google Tag Manager
+  gtm = "G-CN3PDT3T20"
   
   # Enable search in header
   enableSearch = true
