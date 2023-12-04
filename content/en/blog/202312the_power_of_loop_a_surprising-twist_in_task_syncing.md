@@ -12,15 +12,15 @@ toc: true
 
 Spoiler alert: this blog post has a twist ending that you will NEVER see coming!  Okay, maybe you will see it coming if you'd paid attention to some of Microsoft's newer tools, but I'm getting ahead of myself.
  
-##The Use Case
+## The Use Case
 I had a user come to me asking for help building her first Power Automate flow, and what she wanted was pretty ambitious for a beginner.  So, I jumped in and helped build out a POC based on her use case.
  
 She has a small team that meets weekly to go over the tasks they have assigned in Planner to discuss their progress and make additional notes as needed.  So far, she's just been copy/pasting the tasks from Planner into OneNote, but she was looking for a way to automate getting the tasks due in the next 7 days flowing from Planner into OneNote.  A stretch goal was to have the two be synced (mark one as done in OneNote, it shows up as done in Planner), but we'll get to that at the end.
  
-##A Thought About Power Automate Copilot
+## A Thought About Power Automate Copilot
 I tried to use Power Automate Copilot for help on this, as a side bar, and it's… not ready for primetime.  I was asking it to help me write an expression using the date input I'd added to the manual trigger, and over and over again, it just kept removing the input I added instead of helping me write an expression referencing it.  Stick with ChatGPT for now - I had a lot more luck there, and it did the heavy lifting for me when it came to writing expressions.
  
-##The Initial Power Automate Solution
+## The Initial Power Automate Solution
 Yes, you read that right, the "initial" solution because there is, as teased, a TWIST ending!
  
 So my goal was to build a Power Automate flow that would ask for a date as the input on a manual trigger flow, check the current values for Planner and OneNote, then just return inside of OneNote the tasks due in the next 7 days (from the date picked when the flow was started).  We hadn't gotten into who was assigned what task before this idea was ultimately nixed, but I wanted to share what I got working regardless.  Feel free to enhance it (with the aid of ChatGPT even!) and share a further-completed solution - I'd love to see it!
@@ -111,7 +111,7 @@ I'm sure there are ways to target a different spot on the OneNote, but I didn't 
  
 And that's it!  There are loads of options for building onto this or modifying it to suit your needs, but this got a basic proof of concept going.
  
-##The Decision
+## The Decision
  
 …you thought I was done, didn't you?  Did you forget about… the TWIST?
  
@@ -123,7 +123,7 @@ The longer answer is that I'm guessing you could figure out something with anoth
  
 Microsoft Loop was a widget that connected to things, from the little attention I'd been paying to it.  So live on the call, we pulled up Loop and started playing around.
  
-##The Twist Ending
+## The Twist Ending
  
 Sure enough, it seems like Microsoft Loop will do almost exactly what the user was looking for without Power Automate's intervention at all!
  
@@ -141,7 +141,7 @@ The entire Planner dashboard just appeared inside of my Loop page!  It stays syn
  
 Then, around this Planner Loop component (I might not have the verbiage right there), you can type everything you'd be typing in OneNote to add additional details to your task review sessions.
  
-##In Conclusion
+## In Conclusion
  
 In the end, my user was pretty excited along with me about the capabilities of Loop for collaborating while tracking tasks.  It's still pretty new, so there are cons, like very little integration with Power Automate for Loop at the time I'm writing this blog, and it was hard recommending a solution that I came up with while I was on the call.  I'm not writing off that Power Automate solution, either, and I think it has its potential uses beyond my original use case.
  
