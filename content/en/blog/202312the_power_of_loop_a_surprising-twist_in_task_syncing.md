@@ -1,6 +1,6 @@
 ---
 title: "The Power of Loop: A Surprising Twist in Task Syncing"
-date: 2023-12-04T14:49:05-05:00
+date: 2023-12-04T11:49:05-05:00
 draft: false
 author: "Lindsay Shelton"
 tags: ["power automate", "microsoft loop", "microsoft planner", "how to"]
