@@ -147,7 +147,13 @@ In the end, my user was pretty excited along with me about the capabilities of L
  
 So, in short - try out Loop if you are looking for Planner integration that syncs, and try out Power Automate if you are more interested in a stagnant version of your task lists that is much more customizable.  Happy adventuring!
 
+## An Update!
 
+I asked the Microsoft Loop Twitter about why the special twist wasn't working for everyone (as of 12/7/23), and they said the following:
+
+![Placeholder](/images/planner15.png)
+
+So, if you are having trouble with the special twist and don't have an enterprise license, that's why!  I'm not sure if this is a temporary thing or not, but I'll update this post if I hear anything else.
 
 
 
