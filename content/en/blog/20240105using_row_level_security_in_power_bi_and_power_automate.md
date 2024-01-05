@@ -4,7 +4,7 @@ date: 2024-01-05T11:29:05-05:00
 draft: false
 author: "Lindsay Shelton"
 tags: ["power automate", "power bi", "row-level security", "how to"]
-thumbnail: /images/planner13.png
+thumbnail: /images/rowlevelsecurity3.png
 hidePageThumbnail: true
 toc: true
 
