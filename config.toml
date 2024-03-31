@@ -12,7 +12,7 @@ DefaultContentLanguageInSubdir = true
     languageName = "English"
     [languages.en.params]
       introTitle = "Lindsay T. Shelton"
-      introSubtitle = "Application Programmer | Microsoft MVP | Microsoft Certified Trainer | Cat Enthusiast | she/her "
+      introSubtitle = "Application Programmer | Microsoft MVP | Microsoft Certified Trainer | International Speaker | Cat Enthusiast | she/her "
       introPhoto = "/images/headshot3.jpg"
       logo = "/images/LTS2.png"
     [[languages.en.menu.main]]
