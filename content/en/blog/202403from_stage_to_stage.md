@@ -1,5 +1,5 @@
 ---
-title: "How'd I Get Here: My Journey To Today"
+title: "How'd I Get Here: From Stage to Stage"
 date: 2024-03-30T11:29:05-05:00
 draft: false
 author: "Lindsay Shelton"
@@ -14,7 +14,7 @@ toc: true
 
 ![Placeholder](/images/from_stage_to_stage.png)
 
-Recently, I was having a great conversation with my new friend Reid, and he asked me a question that really got me thinking: "____insert question here___".
+Recently, I was having a great conversation with my new friend Reid, and he asked me a question that really got me thinking: "What did you do in your past that prepared you for becoming an MVP?".
 
 I was a theater junkie: such a fan that I sometimes spelt it "theatre".  It started with a traveling community theater group that would put on a show in a week, and I auditioned every summer - it was the highlight of my year.  I begged my parents to put me in theater classes, and they did.  I got a role in "Tales of a Fourth Grade Nothing" that I shared with another actress that required me to miss school for some performances, and I felt like an absolute rock star.  I took improv classes and learned to think on my toes, and I took a year of dance after I ran into someone at the Theater in the Park audition one summer.  I learned to memorize monologues and get up on stage and perform, regardless of any nerves I may have had.  Who knows, maybe I was born without the nerves, just destined to make a fool of myself in front of a crowd with no shame whatsoever.
 
