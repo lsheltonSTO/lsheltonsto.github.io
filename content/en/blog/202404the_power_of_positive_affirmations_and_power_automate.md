@@ -1,13 +1,3 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CN3PDT3T20');
-</script>
-
 ---
 title: "The Power of Positive Affirmations (and Power Automate)"
 date: 2024-04-10T08:29:05-05:00
@@ -17,8 +7,16 @@ tags: ["personal","how to", "power automate", "api", "power apps", "neurospicy"]
 thumbnail: /images/PowerofPositiveAffirmations.png
 hidePageThumbnail: true
 toc: true
-
 ---
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3PDT3T20');
+</script>
 
 ## My Recent Neurospicy Journey (TW: obsessive thoughts)
 
