@@ -68,7 +68,7 @@ Then, as I'm rocking back and forth with my emotional support squishmallow in my
 
 I hope this helps someone else out there who might be struggling with similar thoughts.  I'm not a doctor, but I am a Power Platform enthusiast, and I'm happy to help you out if you need it.  Just reach out to me on Twitter or LinkedIn, and I'll do my best to help you out.
 
-And keep your eyes peeled, because this isn't the only thing I've been cooking up lately to help those with neurospicy brains.  I've got more than a few more tricks up my sleeve that I can't wait to share with you all, but I couldn't wait to share this one.  I hope it helps you as much as it's helped me.
+And keep your eyes peeled, because this isn't the only thing I've been cooking up lately to help those with neurospicy brains.  I've got more than a few more tricks up my sleeve (and my partner in crime's sleeve) that I can't wait to share with you all, but I couldn't wait to share this one.  I hope it helps you as much as it's helped me.
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
