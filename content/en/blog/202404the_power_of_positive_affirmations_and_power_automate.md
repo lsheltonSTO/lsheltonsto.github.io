@@ -38,7 +38,9 @@ For the positive affirmations, I found "inspirational quote" APIs that could do 
 
 Next, I  use a "Compose" action, with the formula borrowed so thankfully from <a href="https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Get-a-random-item-from-a-SharePoint-list/td-p/462817">Rob Elliott</a>.  This formula gets a random value from my "Get items" action:
 
-$PLACEHOLDER$ body('Get_items')?['value'][rand(1,length(body('Get_items')?['value']))]
+```html
+body('Get_items')?['value'][rand(1,length(body('Get_items')?['value']))]
+````
 
 Run your flow once to get all of that lovely JSON data from the "Compose" action.  It should look something like this:
 
