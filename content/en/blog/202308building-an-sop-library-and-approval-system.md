@@ -4,7 +4,7 @@ date: 2023-08-07T14:49:05-05:00
 draft: false
 author: "Lindsay Shelton"
 tags: ["sharepoint","power automate", "how to"]
-thumbnail: /images/building-an-sop-library-and-approval-system1.png
+thumbnail: /images/building-an-sop-library-and-approval-system26.png
 hidePageThumbnail: true
 toc: true
 
@@ -51,7 +51,7 @@ Now you want to click on "Permissions for this document library".  You'll see th
 
 The reason we are doing this is because I don't want anyone who can see Institute Documents to be able to see the Zebrafish SOP Library - it's just for members of this department.  So, I'm going to click "Grant Permissions" and add the group (or people, but groups are recommended) that I want to have access to this library.  In this case, it's the Zebrafish group.  I'm going to give them "Contribute" permissions, which means they can add, edit, and delete items.  The managers are going to need a higher level, however, so I'm going to individually add them and give them "Design" permissions.  This is so that they can mark a document as approved, which is a part of the process near the end.
 
-For two of my libraries, I actually manage permissions with custom SharePoint groups.  You can make them by going to your main site, clicking the gear, clicking "Site settings", and clicking "People and groups".  From here, it takes me to a group that already exists, but if I click "Groups" on the left, it takes me to all of the groups for that site.  From here, I can add the new groups thatI want.  The reason I'm adding groups is to manage voting on, or approving, the final SOPs.  When I get to the flows for that section, you will see why we did this, but also works for assigning permissions to the Zebrafish library.  We aren't using SharePoint groups for this one, but I'll still share a little info on the why and how if you'd find them useful.
+For two of my libraries, I actually manage permissions with custom SharePoint groups.  You can make them by going to your main site, clicking the gear, clicking "Site settings", and clicking "People and groups".  From here, it takes me to a group that already exists, but if I click "Groups" on the left, it takes me to all of the groups for that site.  From here, I can add the new groups thatI want.  The reason I'm adding groups is to manage voting on, or approving, the final SOPs.  When I get to the flows for that section, you will see why we did this, but also works for assigning permissions to the Zebrafish library.  We aren't using SharePoint groups for this one, but still thought I'd share a little info on the why and how if you'd find them useful.
 
 ![Placeholder](/images/building-an-sop-library-and-approval-system2.png)
 
