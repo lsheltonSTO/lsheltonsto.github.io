@@ -74,6 +74,10 @@ This is totally up to the group you are building this for, but I've found that t
 
 I'm not sure if I can wrap this up in Part Two, but coming soon (I hope) will be an overview of the flows that I use and their structure.  One of them is even in the PnP Samples gallery for your use!
 
+## Update
+
+I did wrap this up in <a href="https://www.lindsaytshelton.com/blog/202404building-an-sop-library-and-approval-system-part-two/">Part Two!</a>  Enjoy!
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
 <script>
