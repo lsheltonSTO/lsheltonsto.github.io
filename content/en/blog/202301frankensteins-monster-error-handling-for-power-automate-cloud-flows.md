@@ -93,7 +93,7 @@ Don’t forget to click Ok to input your new expression.
 
 The third Compose action is where we get fancy (and where we may have to update this blog as Microsoft changes these URLs, as I had to do when working from Matthew Devaney’s blog).
 
-The code your are seeking is:
+The code you are seeking is:
 
 ```html
 https://make.powerautomate.com/environments/@{outputs('Compose_-_Get_Workflow_Details')?['tags']?['environmentName']}/flows/@{outputs('Compose_-_Get_Workflow_Details')?['name']}/runs/@{outputs('Compose_-_Get_Workflow_Details')?['run']?['name']}
