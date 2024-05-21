@@ -1,7 +1,7 @@
 ---
 title: "Building a SharePoint SOP Library and Approval System: Part Two"
 date: 2024-04-23T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["sharepoint","power automate","how to"]
 thumbnail: /images/building-an-sop-library-and-approval-system25.png

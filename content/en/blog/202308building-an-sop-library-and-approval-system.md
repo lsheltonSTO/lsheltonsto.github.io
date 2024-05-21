@@ -1,7 +1,7 @@
 ---
 title: "Building a SharePoint SOP Library and Approval System"
 date: 2023-08-07T14:49:05-05:00
-draft: false
+draft: true
 author: "Lindsay Shelton"
 tags: ["sharepoint","power automate", "how to"]
 thumbnail: /images/building-an-sop-library-and-approval-system26.png
@@ -72,7 +72,7 @@ This is totally up to the group you are building this for, but I've found that t
 
 ## Part Two
 
-I'm not sure if I can wrap this up in Part Two, but coming soon (I hope) will be an overview of the flows that I use and their structure.  One of them is even in the PnP Samples gallery for your use!
+I'm not sure if I can wrap this up in Part Two, but coming soon (I hope) will be an overview of the flows that I use and their structure.  One of them is even in the PnP Samples gallery for your use!  
 
 ## Update
 
