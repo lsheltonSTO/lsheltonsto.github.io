@@ -15,10 +15,13 @@ type: about
 * https://learn.microsoft.com/en-us/training/modules/make-app/solutions?wt.mc_id=DX-MVP-5005237 
 * https://learn.microsoft.com/en-us/training/modules/templates-governance-policies/3-templates?wt.mc_id=DX-MVP-5005237 
 * https://blog.atwork.at/post/Power-Platform-Environments-and-Governance-Tips
+* https://www.michaelroth42.com/tags/governance/page/2/
 * https://www.michaelroth42.com/post/2022-05-08-power-platform-governance-part-0/
 * https://lowcodelewis.com/blog/a-simple-start-to-application-lifecycle-management-with-power-platform 
 * https://www.youtube.com/watch?v=o-yL57DuUDE 
 * https://www.matthewdevaney.com/8-power-platform-dlp-policy-best-practices/ 
+* https://platformsofpower.net/ive-installed-the-coe-starter-kit-now-what/
+* https://platformsofpower.net/ppac-attack/
 
 
 <!-- Google tag (gtag.js) -->
