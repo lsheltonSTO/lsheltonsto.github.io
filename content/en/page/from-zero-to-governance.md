@@ -1,8 +1,8 @@
 ---
 author: Lindsay Shelton
 title: From Zero to Governance - One Organization's Journey To Implementing Power Platform Governance
-date: 2023-08-16
-description: For MPPC23
+date: 2024-09-01
+description: For PPCC24
 keywords: ["power platform", "governance"]
 type: about
 
