@@ -1,6 +1,6 @@
 ---
 title: "From Concept to Chatbot: ServiceNow with Copilot Studio - Part 1"
-date: 2024-09-08T08:29:05-05:00
+date: 2024-09-08T09:29:05-05:00
 draft: false
 author: "Lindsay Shelton"
 tags: ["power automate", "copilot studio", "service-now", "how to"]
