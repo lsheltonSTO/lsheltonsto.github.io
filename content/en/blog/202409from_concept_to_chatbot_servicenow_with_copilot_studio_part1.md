@@ -14,7 +14,7 @@ ServiceNow is a behemoth of a product, but it also has a robust API which means 
 
 NOTE: If you don't have a ServiceNow dev environment to play with, you can make one for free.99 here!  https://developer.servicenow.com/dev.do#!/home  It does go away if you don't log in every 10 days, and your stuff won't work unless you go log in and "wake it up", so it's a little finicky, but hey, the price is right and it comes with sample data.  The main thing to know about this is, once you've signed up, you need to change your role by clicking on your user icon in the top righthand corner and clicking "Change User Role:
 
-![Placeholder](/images/content_to_chatbot1.png)
+![Placeholder](/images/concept_to_chatbot1.png)
 
 Change it from "App Engine Studio Creator" to "Admin" and then you can access the REST API Explorer and actually look at ServiceNow like you'd expect it to look like.  This took me far longer to figure out than I care to admit.
 
