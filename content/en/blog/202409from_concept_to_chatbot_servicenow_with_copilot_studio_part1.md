@@ -10,7 +10,7 @@ toc: true
 
 ---
 
-Head back to the <a href="https://www.lindsaytshelton.com/blog/202409from_concept_to_chatbot_servicenow_with_copilot_studio_part1/">intro post</a> to get the use case and architecture of the Copilot Studio bots I'll be describing in these blog posts.
+Head back to the <a href="https://www.lindsaytshelton.com/blog/202409from_concept_to_chatbot_servicenow_with_copilot_studio_intro/">intro post</a> to get the use case and architecture of the Copilot Studio bots I'll be describing in these blog posts.
 
 In this post, I'll be giving a general overview of Copilot Studio, Topics which are the main thing I utilized (though there's much more that can be used), how I figured out troubleshooting the bot, and the Power Automate flows used in the initial POC I built.
 
