@@ -40,6 +40,8 @@ What we developed for the Hackathon was a bit different.
 
 I will eventually go over and document all of the things, but I can only write so much at a time!  First up in this series - is this my first series? - is going to be the conversational boosting topic (Ask a Question), including some of our struggles with it at my org.  So stay tuned, get your ServiceNow dev environment going, and feel free to poke me on Twitter or LinkedIn if I'm dilly dallying too long on getting the next part out!
 
+And without further adieu - <a href="https://www.lindsaytshelton.com/blog/202409from_concept_to_chatbot_servicenow_with_copilot_studio_part1/">here's Part 1</a>!
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
 <script>
