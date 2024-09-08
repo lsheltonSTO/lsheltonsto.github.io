@@ -4,7 +4,7 @@ date: 2024-09-08T08:29:05-05:00
 draft: false
 author: "Lindsay Shelton"
 tags: ["power automate", "copilot studio", "service-now", "how to"]
-thumbnail: /images/concept_to_chatbot6.png)
+thumbnail: /images/concept_to_chatbot6.png
 hidePageThumbnail: true
 toc: true
 
