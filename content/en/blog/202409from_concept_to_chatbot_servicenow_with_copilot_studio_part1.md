@@ -4,7 +4,7 @@ date: 2024-09-08T08:29:05-05:00
 draft: false
 author: "Lindsay Shelton"
 tags: ["power automate", "copilot studio", "service-now", "how to"]
-thumbnail: /images/content_to_chatbot6.png)
+thumbnail: /images/concept_to_chatbot6.png)
 hidePageThumbnail: true
 toc: true
 
@@ -18,13 +18,13 @@ NOTE: If you don't have a ServiceNow dev environment to play with, you can make 
 
 Change it from "App Engine Studio Creator" to "Admin" and then you can access the REST API Explorer and actually look at ServiceNow like you'd expect it to look like.  This took me far longer to figure out than I care to admit.
 
-![Placeholder](/images/content_to_chatbot2.png)
+![Placeholder](/images/concept_to_chatbot2.png)
 
 ## The Use Case
 
 So the use case here started out pretty simply - I wanted to play with Copilot Studio and learn how to use it.  Once I saw Dewain's video, I knew that was going to be a fantastic use case for me to test out for a few reasons.  One reason is that my organization uses ServiceNow extensively in addition to M365.  Another reason is that I'm a millennial, and I'm a pretty stereotypical millennial.  I don't want to talk to customer service people.  If there is a chatbot, I'm using the chatbot, and so do every single one of my friends in my age group that I've asked.  We love avoiding human contact, and so I knew my use case and my key audience - people like me.
 
-![Placeholder](/images/content_to_chatbot3.png)
+![Placeholder](/images/concept_to_chatbot3.png)
 
 I actually proposed this idea to my org's Hackathon that we just finished, so I have both what I worked out on my own and what my team worked out to blog about.  So hold onto yer britches, because I've got a lot of content about Copilot Studio and ServiceNow to share.
 
@@ -32,11 +32,11 @@ I actually proposed this idea to my org's Hackathon that we just finished, so I 
 
 This is the architecture for what I developed on my own (though I couldn't have done the work without the help of greats like Azure McFarlane, Joe Unwin, Troy Taylor, and Jeff Charikofsky):
 
-![Placeholder](/images/content_to_chatbot4.png)
+![Placeholder](/images/concept_to_chatbot4.png)
 
 What we developed for the Hackathon was a bit different.
 
-![Placeholder](/images/content_to_chatbot5.png)
+![Placeholder](/images/concept_to_chatbott5.png)
 
 I will eventually go over and document all of the things, but I can only write so much at a time!  First up in this series - is this my first series? - is going to be the conversational boosting topic (Ask a Question), including some of our struggles with it at my org.  So stay tuned, get your ServiceNow dev environment going, and feel free to poke me on Twitter or LinkedIn if I'm dilly dallying too long on getting the next part out!
 
