@@ -36,7 +36,7 @@ This is the architecture for what I developed on my own (though I couldn't have 
 
 What we developed for the Hackathon was a bit different.
 
-![Placeholder](/images/concept_to_chatbott5.png)
+![Placeholder](/images/concept_to_chatbot5.png)
 
 I will eventually go over and document all of the things, but I can only write so much at a time!  First up in this series - is this my first series? - is going to be the conversational boosting topic (Ask a Question), including some of our struggles with it at my org.  So stay tuned, get your ServiceNow dev environment going, and feel free to poke me on Twitter or LinkedIn if I'm dilly dallying too long on getting the next part out!
 
