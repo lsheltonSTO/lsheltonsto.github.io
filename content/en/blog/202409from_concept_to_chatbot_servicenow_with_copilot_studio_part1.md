@@ -79,6 +79,8 @@ This allows you to follow along with the topic and nodes (the blocks) as the con
 *	As the copilot is running a test conversation, click “Variables” and click “Test” to see the values of the variables (both global and topic) as you go.  You can’t see system variables this way, so those you would just have to put into a “Send a message” node to see their values temporarily.
 ![Placeholder](/images/concept_to_chatbot15.png)
 
+I’ll see you in part 2, where we get into the nitty-gritty of the first topic, <a href="https://www.lindsaytshelton.com/blog/202409from_concept_to_chatbot_servicenow_with_copilot_studio_part2/">Conversation Start</a>!
+
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>

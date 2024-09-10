@@ -42,6 +42,8 @@ I will eventually go over and document all of the things, but I can only write s
 
 And without further adieu - <a href="https://www.lindsaytshelton.com/blog/202409from_concept_to_chatbot_servicenow_with_copilot_studio_part1/">here's Part 1</a>!
 
+<a href="https://www.lindsaytshelton.com/blog/202409from_concept_to_chatbot_servicenow_with_copilot_studio_part2/">Part 2 - Conversation Start</a>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3PDT3T20"></script>
 <script>
