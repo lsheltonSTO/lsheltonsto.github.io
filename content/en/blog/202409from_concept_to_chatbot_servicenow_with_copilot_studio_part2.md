@@ -38,7 +38,7 @@ This flow just has two actions in it after the trigger - a premium HTTP call and
 
 This is the entire flow!  The hardest parts are getting the HTTP call right, getting your authorization working, and the formula to return just the sys_id, but I've got you covered for all three.
 
-* HTTP Call: https://<insert your instance name here>.service-now.com/api/now/table/sys_user?sysparm_query=email=@{triggerBody()['text']} AKA https://{insert your instance name here}service-now.com/api/now/table/sys_user?sysparm_query=email={dynamic content for Email input}.  This is a GET call.  Set your headers just like mine in the picture.
+* HTTP Call: https://<insert your instance name here>.service-now.com/api/now/table/sys_user?sysparm_query=email=@{triggerBody()['text']} AKA https://(insert your instance name here)service-now.com/api/now/table/sys_user?sysparm_query=email=(dynamic content for Email input).  This is a GET call.  Set your headers just like mine in the picture.
 * Authorization: I used Raw as the method (expand "Show advanced options") and put my username and password into one string like this: username:password.  I then took "username:password" and used a Base 64 encoder website to encode the value.  Then for the Raw value, you just put the word "Basic " and then your encoded username/password.
 * Return value to Power Virtual Agents/Respond to Copilot: This is where you will put the formula to return just the sys_id.  This is what I used: body('HTTP')?['result'][0]['sys_id']
 
