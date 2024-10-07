@@ -8,6 +8,8 @@ type: about
 
 ---
 
+NEW - link to the What'sApp Admin and Governance community: https://chat.whatsapp.com/EOC6CKaXippDtjuRP8tG06
+
 * https://learn.microsoft.com/en-us/power-platform/guidance/adoption/admin-best-practices?wt.mc_id=DX-MVP-5005237 
 * https://learn.microsoft.com/en-us/power-platform/admin/environments-overview?wt.mc_id=DX-MVP-5005237 
 * https://learn.microsoft.com/en-us/power-platform/guidance/coe/setup?source=recommendations?wt.mc_id=DX-MVP-5005237 
