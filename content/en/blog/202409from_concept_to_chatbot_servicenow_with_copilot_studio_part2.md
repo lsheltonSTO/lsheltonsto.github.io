@@ -44,7 +44,7 @@ This is the entire flow!  The hardest parts are getting the HTTP call right, get
 
 Go back to Copilot Studio and refresh the flow action.  You should now see your input and your output as options.  Set your sysid output as a Global variable that I called Global.userSysId.  Now we can use it in all of our topics.
 
-I'll see you in part 3, where we get into the really cool stuff - conversational boosting!
+I'll see you in <a href="https://www.lindsaytshelton.com/blog/202409from_concept_to_chatbot_servicenow_with_copilot_studio_part3/">part 3</a>, where we get into the really cool stuff - conversational boosting!
 
 Want to contact me about your own Copilot Studio ServiceNow bot?  Do so below!
 
