@@ -44,6 +44,10 @@ And without further adieu - <a href="https://www.lindsaytshelton.com/blog/202409
 
 <a href="https://www.lindsaytshelton.com/blog/202409from_concept_to_chatbot_servicenow_with_copilot_studio_part2/">Part 2 - Conversation Start</a>
 
+<a href="https://www.lindsaytshelton.com/blog/202409from_concept_to_chatbot_servicenow_with_copilot_studio_part3/">Part 3 - Conversation Boosting</a>
+
+<a href="https://www.lindsaytshelton.com/blog/202409from_concept_to_chatbot_servicenow_with_copilot_studio_part4/">Part 4 - Open a Ticket</a>
+
 Want to contact me about your own Copilot Studio ServiceNow bot?  Do so below!
 
 <style>
