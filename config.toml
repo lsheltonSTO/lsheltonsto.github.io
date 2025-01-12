@@ -12,7 +12,7 @@ DefaultContentLanguageInSubdir = true
     languageName = "English"
     [languages.en.params]
       introTitle = "Lindsay T. Shelton"
-      introSubtitle = "Application Programmer | Microsoft MVP | Microsoft Certified Trainer | International Speaker | Cat Enthusiast | she/her "
+      introSubtitle = "Digital Workplace Advisor | Microsoft MVP | Microsoft Certified Trainer | International Speaker | Cat Enthusiast | she/her "
       introPhoto = "/images/headshot3.jpg"
       logo = "/images/LTS2.png"
     [[languages.en.menu.main]]
@@ -111,8 +111,8 @@ DefaultContentLanguageInSubdir = true
   description = "Follow along for Power Platform, M365, and cat goodness"
 
   [[params.homepage.social.icons]]
-    website = "twitter"
-    url = "https://twitter.com/LShelton_Tech"
+    website = "bsky"
+    url = "https://bsky.app/profile/lindsaytshelton.com"
   [[params.homepage.social.icons]]
     website = "linkedin"
     url = "https://linkedin.com/in/lindsaytshelton"
