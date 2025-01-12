@@ -4,7 +4,7 @@ date: 2025-01-12T11:29:05-05:00
 draft: false
 author: "Lindsay Shelton"
 tags: ["power automate", "microsoft word", "how to"]
-thumbnail: /images/populating_a_word_template_for_an_easy_win20.png)
+thumbnail: /images/populating_a_word_template_for_an_easy_win20.png
 hidePageThumbnail: true
 toc: true
 
