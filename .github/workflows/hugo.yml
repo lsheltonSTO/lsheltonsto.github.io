@@ -48,10 +48,20 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Check for symlinks and hard links
+        run: |
+          if find ./public -type l | read; then
+            echo "Error: Symlinks found in the public directory" >&2
+            exit 1
+          fi
+          if find ./public -type f -links +1 | read; then
+            echo "Error: Hard links found in the public directory" >&2
+            exit 1
+          fi
       - name: Upload artifact
-        uses: actions/upload-artifact@v4  # ✅ FIXED: Updated to v4
+        uses: actions/upload-artifact@v4
         with:
-          name: github-pages  # Ensure the artifact name matches here
+          name: github-pages
           path: ./public
 
   deploy:
@@ -62,9 +72,9 @@ jobs:
     needs: build
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v4  # ✅ FIXED: Updated to v4
+        uses: actions/download-artifact@v4
         with:
-          name: github-pages  # Ensure the artifact name matches here
+          name: github-pages
           path: ./public
       - name: Deploy to GitHub Pages
         id: deployment
