@@ -58,6 +58,14 @@ jobs:
             echo "Error: Hard links found in the public directory" >&2
             exit 1
           fi
+      - name: Check directory size
+        run: |
+          dir_size=$(du -sh ./public | cut -f1)
+          echo "Directory size: $dir_size"
+          if [ $(du -s ./public | cut -f1) -gt 10485760 ]; then
+            echo "Error: Directory size exceeds 10GB" >&2
+            exit 1
+          fi
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
