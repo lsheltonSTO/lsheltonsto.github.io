@@ -1,7 +1,6 @@
 ---
 title: "Create a Dynamic Meeting Agenda with Microsoft Loop"
 date: 2025-03-07T11:29:05-05:00
-draft: false
 author: "Lindsay Shelton"
 tags: ["microsoft loop", "outlook", "how to"]
 thumbnail: /images/dynamic-agenda-with-loop7.png
