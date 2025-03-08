@@ -1,4 +1,4 @@
-name: Deploy Hugo site
+name: Deploy Hugo site to main
 
 on:
   push:
@@ -37,10 +37,12 @@ jobs:
           HUGO_ENV: production
         run: hugo --minify
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (main branch)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages
+          publish_branch: main
           force_orphan: true
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
