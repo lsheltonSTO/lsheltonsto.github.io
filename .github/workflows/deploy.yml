@@ -1,4 +1,4 @@
-name: Deploy Hugo site to main
+name: Deploy Hugo site to /docs on main
 
 on:
   push:
@@ -15,6 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
+          fetch-depth: 0
           submodules: recursive
 
       - name: Install Hugo
@@ -37,12 +38,15 @@ jobs:
           HUGO_ENV: production
         run: hugo --minify
 
-      - name: Deploy to GitHub Pages (main branch)
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Copy site to docs folder
+        run: |
+          rm -rf docs
+          cp -R public docs
+
+      - name: Commit and push docs folder
+        uses: EndBug/add-and-commit@v9
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: main
-          force_orphan: true
-          user_name: github-actions[bot]
-          user_email: github-actions[bot]@users.noreply.github.com
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "Deploy Hugo site to /docs"
+          branch: main
