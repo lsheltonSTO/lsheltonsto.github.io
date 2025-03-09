@@ -3,7 +3,7 @@ title: "How to Add and Use the New Prompts App"
 date: 2025-03-07T11:29:05-05:00
 author: "Lindsay Shelton"
 tags: ["prompts", "m365 copilot", "how to", "microsoft teams"]
-thumbnail: /images/dynamic-agenda-with-loop7.png
+thumbnail: /images/how_to_add_and_use_prompts_app4.png
 hidePageThumbnail: true
 toc: false
 
@@ -27,8 +27,8 @@ Then, to get started using it, let's click on the Prompts button to open up the 
  
 You will notice there are three sections to the app - Microsoft Prompts, Your Prompts, and Team Prompts.
  
- ![Placeholder](/images/how_to_add_and_use_prompts_app4.png)
-  ![Placeholder](/images/how_to_add_and_use_prompts_app5.png)
+![Placeholder](/images/how_to_add_and_use_prompts_app4.png)
+![Placeholder](/images/how_to_add_and_use_prompts_app5.png)
  
 You'll notice there's probably nothing in Your Prompts and Team Prompts for you... yet, but I'll show you how to change that.
 
@@ -40,14 +40,14 @@ You can do this in either Work or Web chat, wherever you'd normally put this pro
 
 If you have dynamic content you want to include in your prompt, aka the stuff you get by hitting the backslash first in the Work chat, you will want to put in a placeholder unless you want to always refer to that file, meeting, or person.  See what I mean here:
 
- ![Placeholder](/images/how_to_add_and_use_prompts_app6.png)
+![Placeholder](/images/how_to_add_and_use_prompts_app6.png)
  
 See - where it says "insert meeting here", I'd normally actually refer to a specific meeting.  Because I don't want to save a specific meeting in my prompt, I've just put some text in as a placeholder instead.  Submit your prompt.
 
 Now I don't get very good results - I didn't even give it a real meeting!  That's okay, because for once we aren't concerned with Copilot's response - we want to look at our prompt.  Hover over your prompt once Copilot is done generating its text and you will see some icons appear.  We want to click on the one that looks like a bookmark - "Save prompt".
  
- ![Placeholder](/images/how_to_add_and_use_prompts_app7.png)
- ![Placeholder](/images/how_to_add_and_use_prompts_app8.png)
+![Placeholder](/images/how_to_add_and_use_prompts_app7.png)
+![Placeholder](/images/how_to_add_and_use_prompts_app8.png)
 
 Now, go back to Prompts and click the "Your prompts" tab.  You should now see your new prompt there!  So far, while you can access the prompt gallery from other Copilots, it appears that you can only save prompts from Copilot Chat.  However, I'd guess that soon you will be able to save prompts from other places as well - remember, this is brand new, so expect new features to be coming.
 
