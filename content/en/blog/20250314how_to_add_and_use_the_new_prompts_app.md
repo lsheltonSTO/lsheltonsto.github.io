@@ -1,6 +1,6 @@
 ---
 title: "How to Add and Use the New Prompts App"
-date: 2025-03-13T11:29:05-05:00
+date: 2025-03-13T08:29:05-05:00
 author: "Lindsay Shelton"
 tags: ["prompts", "m365 copilot", "how to", "microsoft teams"]
 thumbnail: /images/how_to_add_and_use_prompts_app4.png
