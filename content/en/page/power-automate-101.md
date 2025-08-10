@@ -1,7 +1,7 @@
 ---
 author: Lindsay Shelton
 title: Power Automate 101
-date: 2025-08-13
+date: 2025-08-09
 description: For Playing Along!
 keywords: ["power automate", "how to"]
 type: about
