@@ -1,12 +1,16 @@
 ---
 author: Lindsay Shelton
 title: Power Automate 101
-date: 2023-08-14
-description: For MPPC23
+date: 2025-08-13
+description: For Playing Along!
 keywords: ["power automate", "how to"]
 type: about
 
 ---
+## If you want to follow along, make a copy of this form:
+https://forms.office.com/Pages/ShareFormPage.aspx?id=1oShXOtSg0uepbf5YP9VhAjmE5lKRcxDthhnsWbjXvRUM1IzU0VZR1JIUE5ENUFNWVhVWEtWOTVKRi4u&sharetoken=8wVyqSTfxQONjQkF8S5J
+
+OR make a one-question form with a choice question and modify your flow based on the choices you set up!
 
 ## Exercise 1
 
